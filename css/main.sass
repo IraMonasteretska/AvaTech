@@ -1,0 +1,16 @@
+
+
+@import 'mixins'
+@import 'sections/header'
+
+@include font-face(gpb, fonts/GothamPro-Bold, null, null, ttf)
+@include font-face(gpl, fonts/GothamPro-Light, null, null, ttf)
+@include font-face(gp, fonts/GothamPro, null, null, ttf)
+body
+    font-family: gp
+
+.container
+    +minq(1441px)
+        max-width: 1510px 
+    +mq(lg)
+        max-width: 100%
