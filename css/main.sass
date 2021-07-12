@@ -2,13 +2,28 @@
 
 @import 'mixins'
 @import 'sections/header'
+@import 'sections/about'
+
+$at_black: #000
 
 @include font-face(gpb, fonts/GothamPro-Bold, null, null, ttf)
 @include font-face(gpl, fonts/GothamPro-Light, null, null, ttf)
+@include font-face(gpm, fonts/GothamPro-Medium, null, null, ttf)
 @include font-face(gp, fonts/GothamPro, null, null, ttf)
 body
     font-family: gp
 
+.s-title
+    text-align: center
+    font-family: gpb
+    font-size: 36px
+    line-height: 34px
+    text-transform: uppercase
+    color: $at_black
+
+img
+    max-width: 100% 
+    
 .container
     +minq(1441px)
         max-width: 1510px 

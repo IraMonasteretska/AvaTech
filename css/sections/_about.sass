@@ -1,0 +1,65 @@
+.about
+    &__title
+        margin-bottom: 100px
+
+    &__text
+        padding-left: 40px
+        font-size: 15px
+        line-height: 145%
+        p 
+            padding-bottom: 22px
+            border-bottom: 1px solid #000
+    &__statistics
+        padding-left: 40px
+        display: flex
+        justify-content: space-between
+
+        .statistics-item
+            flex-grow: 1
+            padding: 0 15px
+            text-align: center
+            &:nth-child(1)
+                min-width: 110px
+
+            &__numb
+                font-family: gpm
+                font-size: 72px
+                line-height: 69px
+                margin-bottom: 14px
+
+
+            &__text
+                font-size: 15px
+                line-height: 145%
+    &__items
+        margin-top: 130px
+        position: relative
+        padding: 27px 0
+
+        &::after
+            content: ''
+            display: block
+            width: 50%
+            height: 100%
+            position: absolute
+            background: #000
+            top: 0
+            right: 0
+            z-index: -1
+
+        .about-item
+            text-align: center
+            padding: 0 15px
+
+        .row
+            &>div
+                &:nth-child(4)
+                    .about-item
+                        color: #fff
+                &:nth-child(5)
+                    .about-item
+                        color: #fff
+                &:nth-child(6)
+                    .about-item
+                        color: #fff
+                    
