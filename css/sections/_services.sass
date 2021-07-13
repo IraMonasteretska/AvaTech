@@ -1,6 +1,7 @@
 
 
 .services
+    margin-bottom: 100px
     &__title
         margin-bottom: 100px
     &__items
@@ -10,11 +11,7 @@
 .accordeon 
     width: 100%
     height: 100%
-    // background-color: #c19947
-    transform: translateZ(0)
     display: flex
-
-    
 
     &-item
         position: relative
@@ -22,7 +19,6 @@
         width: 75px
         // height: 100%
         color: #fff
-        // border-right: 2px solid rgba(255, 255, 255, 0.5)
         overflow: hidden
         cursor: pointer
         transition: 0.5s ease-out
@@ -32,12 +28,12 @@
                 color: #fff
         
         &.active
+            flex-grow: 10
             .accordeon-item__prev
                 border-right: 2px solid rgb(255, 255, 255)
 
 
         &__prev
-            // min-width: 100%
             position: relative
             text-align: center
             background: #000
@@ -50,7 +46,6 @@
                 font-size: 24px
                 display: block
                 line-height: 145%
-                // transform: translate(17px, 0px)
                 color: rgba(255, 255, 255, 0.5)
                 transition: 0.3s
 
@@ -68,6 +63,8 @@
                 transition: color 0.3s
                 background: #000
                 z-index: 2
+                +mq(xxl)
+                    font-size: 20px
                 span
                     display: block
                     
@@ -96,29 +93,34 @@
             min-width: 395px
             line-height: 145%
             color: #FFFFFF
+           
         &__content
             display: flex
             transition: 0.5s
             align-items: center
-            justify-content: space-between
             justify-content: flex-end
             width: 100%
             padding-right: 15px
             background-image: url(../img/servbg.png)
             background-repeat: no-repeat
             background-position: center center
+            +mq(xxl)
+                justify-content: flex-start
+                padding-left: 15px
+
+            img
+                +mq(xxl)
+                    min-width: 549px
+                    min-height: 530px
+                +mq(xl)
+                    min-width: 449px
+                    min-height: 430px
         &-text
             padding-right: 100px
-
-
-.accordeon .link:last-child 
-    border-right: 0
-
-/* Taille des onglets ouverts */
-.accordeon .link.active 
-    width: calc( 100% - 150px )
-    // flex-grow: 10
-    // background-color: #000
+            +mq(xxl)
+            padding-right: 50px
+        &-img
+            // width: 50%
 
 
 .accordeon .link.active .accordeon-item__prev 
@@ -130,38 +132,4 @@
 
 .accordeon .link:not(.active) .full_content 
     opacity: 0
-
-
-.accordeon .link .full_content 
-    // position: absolute
-    // top: 22px
-    // left: 100px
-
-
-
-.accordeon .link .prev 
-    height: 100%
-    // width: 100%
-    font-size: 12px
-    transition: 0.3s ease
-    padding: 25px 10px
-
-
-.accordeon .link .prev > span 
-    display: block
-    height: 100%
-    width: 100%
-    transition: 0.3s ease
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: contain
-
-
-// .accordeon .link:hover .prev 
-//     filter: brightness(0%)
-
-// .accordeon .link.hovered .prev 
-//     filter: brightness(0%)
-
-
 
