@@ -42,8 +42,9 @@ $( document ).ready(function() {
             return window.innerWidth < maxWidth;
         }
     });
-    $(".accordeon .link").bind("click", function() {
-        $(".accordeon .link").removeClass("hovered");
-        $(this).addClass("hovered");
+
+    $(".accordeon-item").bind("click", function() {
+        $(".accordeon-item").removeClass("active");
+        $(this).addClass("active");
     });
 });

@@ -1,8 +1,5 @@
 
-#reseaux_sociaux 
-    margin: 25px auto
-    width: 100%
-    height: 50vh
+
 .services
     &__items
         padding-top: 56px
@@ -15,65 +12,122 @@
     transform: translateZ(0)
     display: flex
 
-    .link 
+    
+
+    &-item
         position: relative
-        float: left
+        display: flex
         width: 75px
-        height: 100%
+        // height: 100%
         color: #fff
         border-right: 2px solid #C4C4C4
         overflow: hidden
         cursor: pointer
         transition: 0.5s ease-out
-    &-conten
+        &:hover
+            .prev__title,
+            .prev__numb
+                color: #fff
+
+        &__prev
+            // min-width: 100%
+            position: relative
+            text-align: center
+            .prev__numb
+                font-family: gpb
+                font-size: 24px
+                display: block
+                line-height: 145%
+                transform: translate(17px, 0px)
+                color: rgba(255, 255, 255, 0.5)
+                transition: 0.3s
+
+            .prev__title
+                font-size: 24px
+                line-height: 145%
+                position: absolute
+                top: 100%
+                left: 50%
+                white-space: nowrap
+                display: block
+                writing-mode: vertical-rl
+                transform: translate(0px, -100%) rotate(180deg)
+                color: rgba(255, 255, 255, 0.5)
+                transition: color 0.3s
+                span
+                    display: block
+                    
+           
+            
         &__title
             font-family: gpb
             font-size: 24px
             line-height: 145%
             color: #FFFFFF
             margin-bottom: 38px
+            position: relative
+            padding-left: 62px
+
+            &::after
+                content: ''
+                height: 1px
+                width: 40px
+                background: #fff
+                position: absolute
+                top: 50%
+                left: 0
         &__text
             font-size: 15px
             max-width: 395px
+            min-width: 395px
             line-height: 145%
             color: #FFFFFF
+        &__content
+            display: flex
+            transition: 0.5s
+            align-items: center
+            justify-content: space-between
+            justify-content: flex-end
+            width: 100%
+            padding-right: 15px
+            background-image: url(../img/servbg.png)
+            background-repeat: no-repeat
+            background-position: center center
+        &-text
+            padding-right: 100px
 
 
 .accordeon .link:last-child 
     border-right: 0
 
 /* Taille des onglets ouverts */
-.accordeon .link.hovered 
-    // width: 70%
-    flex-grow: 10
-    background-color: #000
+.accordeon .link.active 
+    width: calc( 100% - 150px )
+    // flex-grow: 10
+    // background-color: #000
 
 
-.accordeon .link.hovered .prev 
+.accordeon .link.active .accordeon-item__prev 
     opacity: 0
+    .prev__numb
+        color: #fff
+    .prev__title
+        color: #fff
 
-
-.accordeon .link img 
-    filter: brightness(0%)
-
-
-.accordeon .link:not(.hovered) .full_content 
+.accordeon .link:not(.active) .full_content 
     opacity: 0
 
 
 .accordeon .link .full_content 
-    position: absolute
-    top: 22px
-    left: 100px
+    // position: absolute
+    // top: 22px
+    // left: 100px
 
-
-.accordeon .link .full_content img 
-    width: 50px
 
 
 .accordeon .link .prev 
     height: 100%
-    width: 100%
+    // width: 100%
     font-size: 12px
     transition: 0.3s ease
     padding: 25px 10px
