@@ -167,6 +167,10 @@
   height: 100vh;
 }
 
+.about {
+  margin-bottom: 127px;
+}
+
 .about__title {
   margin-bottom: 100px;
 }
@@ -292,6 +296,10 @@
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   opacity: 1;
+}
+
+.services__title {
+  margin-bottom: 100px;
 }
 
 .services__items {
