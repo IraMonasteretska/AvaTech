@@ -325,7 +325,6 @@
   display: flex;
   width: 75px;
   color: #fff;
-  border-right: 2px solid #C4C4C4;
   overflow: hidden;
   cursor: pointer;
   -webkit-transition: 0.5s ease-out;
@@ -337,9 +336,17 @@
   color: #fff;
 }
 
+.accordeon-item.active .accordeon-item__prev {
+  border-right: 2px solid white;
+}
+
 .accordeon-item__prev {
   position: relative;
   text-align: center;
+  background: #000;
+  z-index: 2;
+  min-width: 75px;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .accordeon-item__prev .prev__numb {
@@ -347,8 +354,6 @@
   font-size: 24px;
   display: block;
   line-height: 145%;
-  -webkit-transform: translate(17px, 0px);
-          transform: translate(17px, 0px);
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -365,11 +370,13 @@
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  -webkit-transform: translate(0px, -100%) rotate(180deg);
-          transform: translate(0px, -100%) rotate(180deg);
+  -webkit-transform: translate(-50%, -100%) rotate(180deg);
+          transform: translate(-50%, -100%) rotate(180deg);
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  background: #000;
+  z-index: 2;
 }
 
 .accordeon-item__prev .prev__title span {
@@ -437,10 +444,6 @@
 /* Taille des onglets ouverts */
 .accordeon .link.active {
   width: calc( 100% - 150px);
-}
-
-.accordeon .link.active .accordeon-item__prev {
-  opacity: 0;
 }
 
 .accordeon .link.active .accordeon-item__prev .prev__numb {

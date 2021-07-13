@@ -22,7 +22,7 @@
         width: 75px
         // height: 100%
         color: #fff
-        border-right: 2px solid #C4C4C4
+        // border-right: 2px solid rgba(255, 255, 255, 0.5)
         overflow: hidden
         cursor: pointer
         transition: 0.5s ease-out
@@ -30,17 +30,27 @@
             .prev__title,
             .prev__numb
                 color: #fff
+        
+        &.active
+            .accordeon-item__prev
+                border-right: 2px solid rgb(255, 255, 255)
+
 
         &__prev
             // min-width: 100%
             position: relative
             text-align: center
+            background: #000
+            z-index: 2
+            min-width: 75px
+            border-right: 2px solid rgba(255, 255, 255, 0.5)
+
             .prev__numb
                 font-family: gpb
                 font-size: 24px
                 display: block
                 line-height: 145%
-                transform: translate(17px, 0px)
+                // transform: translate(17px, 0px)
                 color: rgba(255, 255, 255, 0.5)
                 transition: 0.3s
 
@@ -53,9 +63,11 @@
                 white-space: nowrap
                 display: block
                 writing-mode: vertical-rl
-                transform: translate(0px, -100%) rotate(180deg)
+                transform: translate(-50%, -100%) rotate(180deg)
                 color: rgba(255, 255, 255, 0.5)
                 transition: color 0.3s
+                background: #000
+                z-index: 2
                 span
                     display: block
                     
@@ -110,7 +122,7 @@
 
 
 .accordeon .link.active .accordeon-item__prev 
-    opacity: 0
+    // opacity: 0
     .prev__numb
         color: #fff
     .prev__title
