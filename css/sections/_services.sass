@@ -1,0 +1,99 @@
+
+#reseaux_sociaux 
+    margin: 25px auto
+    width: 100%
+    height: 50vh
+.services
+    &__items
+        padding-top: 56px
+        padding-bottom: 40px
+        background: #000
+.accordeon 
+    width: 100%
+    height: 100%
+    // background-color: #c19947
+    transform: translateZ(0)
+    display: flex
+
+    .link 
+        position: relative
+        float: left
+        width: 75px
+        height: 100%
+        color: #fff
+        border-right: 2px solid #C4C4C4
+        overflow: hidden
+        cursor: pointer
+        transition: 0.5s ease-out
+    &-conten
+        &__title
+            font-family: gpb
+            font-size: 24px
+            line-height: 145%
+            color: #FFFFFF
+            margin-bottom: 38px
+        &__text
+            font-size: 15px
+            max-width: 395px
+            line-height: 145%
+            color: #FFFFFF
+
+
+.accordeon .link:last-child 
+    border-right: 0
+
+/* Taille des onglets ouverts */
+.accordeon .link.hovered 
+    // width: 70%
+    flex-grow: 10
+    background-color: #000
+
+
+.accordeon .link.hovered .prev 
+    opacity: 0
+
+
+.accordeon .link img 
+    filter: brightness(0%)
+
+
+.accordeon .link:not(.hovered) .full_content 
+    opacity: 0
+
+
+.accordeon .link .full_content 
+    position: absolute
+    top: 22px
+    left: 100px
+
+
+.accordeon .link .full_content img 
+    width: 50px
+
+
+.accordeon .link .prev 
+    height: 100%
+    width: 100%
+    font-size: 12px
+    transition: 0.3s ease
+    padding: 25px 10px
+
+
+.accordeon .link .prev > span 
+    display: block
+    height: 100%
+    width: 100%
+    transition: 0.3s ease
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+
+
+// .accordeon .link:hover .prev 
+//     filter: brightness(0%)
+
+// .accordeon .link.hovered .prev 
+//     filter: brightness(0%)
+
+
+

@@ -2,24 +2,48 @@
 				
 $( document ).ready(function() {
     console.log( "ready!" );
-    $('.count').each(function() {
-        var $this = $(this),
-            countTo = $this.attr('data-count');
-        
-        $({ countNum: $this.text()}).animate({
-              countNum: countTo
-        },
-      
-        {
-            duration: 2000,
-            easing:'linear',
-            step: function() {
-                $this.text(Math.floor(this.countNum));
-            },
-            complete: function() {
-                $this.text(this.countNum);
-                //alert('finished');
+
+    function counter () {
+        var statisticsCount = 0;
+
+        $(window).scroll(function() {
+            var oTop = $('.about__statistics').offset().top - window.innerHeight;
+            if (statisticsCount ==0 && $(window).scrollTop() > oTop) { 
+                $('.count').each(function() {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+                    
+                    $({ countNum: $this.text()}).animate({
+                          countNum: countTo
+                    },
+                  
+                    {
+                        duration: 2000,
+                        easing:'linear',
+                        step: function() {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function() {
+                            $this.text(this.countNum);
+                        }
+                    });  
+                    statisticsCount = 1;
+                });
             }
-        });  
+    
+        })
+    }
+    counter()
+
+    // aos animation
+    AOS.init({
+        disable: function () {
+            var maxWidth = 1025;
+            return window.innerWidth < maxWidth;
+        }
+    });
+    $(".accordeon .link").bind("click", function() {
+        $(".accordeon .link").removeClass("hovered");
+        $(this).addClass("hovered");
     });
 });
