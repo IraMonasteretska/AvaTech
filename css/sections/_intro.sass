@@ -1,10 +1,35 @@
 .intro
-    height: calc( 100vh - 99px ) 
+    min-height: calc( 100vh - 99px ) 
     position: relative
     margin-bottom: 100px
 
+    &__cont
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%
+        padding-top: 150px
+    &__logo
+        margin-bottom: 98px
+
+    &__title
+        font-size: 72px
+        line-height: 120%
+        font-family: gpb
+        margin-bottom: 37px
+        color: #fff
+    &__subtitle
+        font-size: 18px
+        line-height: 17px
+        color: rgba(255, 255, 255, 0.7)
+        margin-bottom: 52px
+    &__btn
+        margin-bottom: 200px
+        .btn
+            max-width: 230px
+
     &__conteiner
-        height: calc( 100vh - 99px ) 
+        min-height: calc( 100vh - 99px ) 
         .container
             height: 100%
             position: relative
@@ -20,13 +45,13 @@
         top: 0
 
     .intro-left-bg
-        flex: 0 0 34%
-        max-width: 34%
+        flex: 0 0 36%
+        max-width: 36%
         background: #000
 
     .intro-bg-slider
-        flex: 0 0 66%
-        max-width: 66%
+        flex: 0 0 64%
+        max-width: 64%
 
         .slick-list,
         .slick-track 
@@ -43,7 +68,7 @@
         z-index: 3
         right: 15px
         top: 50%
-        transform: translateY(-50%)
+        transform: translateY(-100%)
 
         button
             display: none

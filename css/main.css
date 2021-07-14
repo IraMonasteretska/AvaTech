@@ -164,13 +164,55 @@
 }
 
 .intro {
-  height: calc( 100vh - 99px);
+  min-height: calc( 100vh - 99px);
   position: relative;
   margin-bottom: 100px;
 }
 
+.intro__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding-top: 150px;
+}
+
+.intro__logo {
+  margin-bottom: 98px;
+}
+
+.intro__title {
+  font-size: 72px;
+  line-height: 120%;
+  font-family: gpb;
+  margin-bottom: 37px;
+  color: #fff;
+}
+
+.intro__subtitle {
+  font-size: 18px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 52px;
+}
+
+.intro__btn {
+  margin-bottom: 200px;
+}
+
+.intro__btn .btn {
+  max-width: 230px;
+}
+
 .intro__conteiner {
-  height: calc( 100vh - 99px);
+  min-height: calc( 100vh - 99px);
 }
 
 .intro__conteiner .container {
@@ -195,17 +237,17 @@
 
 .intro .intro-left-bg {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 34%;
-          flex: 0 0 34%;
-  max-width: 34%;
+      -ms-flex: 0 0 36%;
+          flex: 0 0 36%;
+  max-width: 36%;
   background: #000;
 }
 
 .intro .intro-bg-slider {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 66%;
-          flex: 0 0 66%;
-  max-width: 66%;
+      -ms-flex: 0 0 64%;
+          flex: 0 0 64%;
+  max-width: 64%;
 }
 
 .intro .intro-bg-slider .slick-list,
@@ -225,8 +267,8 @@
   z-index: 3;
   right: 15px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .intro .slick-navigation button {
@@ -945,6 +987,11 @@ img {
 }
 
 .btn_black:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn_white {
   background: #fff;
   color: #000;
 }
