@@ -60,4 +60,82 @@ $( document ).ready(function() {
         autoplay:true,
         autoplaySpeed:5000,
     })
+
+    $('.reviews-slider').slick({
+        adaptiveHeight: true
+        // dots: true,
+
+    })
+
+
+    // $('.block-accessories__more .expand').on('click',function(e){
+    //     e.preventDefault();
+    //     var c =  $(this).parent().prev();;
+    //     var h = c.prop('scrollHeight') ;
+    //     c.addClass('block-accessories__text--open')
+      
+    //         $('.block-accessories__more .expand, .block-accessories__more .collapse').toggle();
+        
+    //         $('.reviews-slider').slick("setPosition")
+    //         $('.reviews-slider').slick('resize')
+     
+    //     // $('.reviews-slider').slick("setPosition")
+    //     // $(window).resize()
+    //     // $('.reviews-slider').slick('resize')
+    // });
+
+    // $('.block-accessories__more .collapse').on('click',function(e){
+    //     e.preventDefault();
+    //     var c = $(this).parent().prev();;
+    //     var h = 75;
+    //     c.removeClass('block-accessories__text--open')
+          
+    //     $('.block-accessories__more .expand, .block-accessories__more .collapse').toggle();
+    
+    //     $('.reviews-slider').slick("setPosition")
+    //     $('.reviews-slider').slick('resize')
+      
+        
+
+
+    // });
+    
+    $('.block-accessories__more .expand').on('click',function(e){
+        e.preventDefault();
+        
+        var c = $(this).parent().prev();
+
+        var h = c.prop('scrollHeight') ;
+        console.log(h);
+    
+        c.animate({'maxHeight':h},function () {
+            $(this).addClass('block-accessories__text--open')
+            
+            
+        }, function () {
+            $('.reviews-slider').slick("setPosition")
+            $('.reviews-slider').slick('resize')
+          console.log('open');
+         
+        });
+        $(this).hide()
+          $(this).next().show()
+    });
+
+    $('.block-accessories__more .collapse').on('click',function(e){
+        e.preventDefault();
+        var c = $(this).parent().prev();
+        var h = 75;
+        c.animate({'maxHeight':h},function () {
+            $(this).removeClass('block-accessories__text--open')
+            
+        }, function () {
+            $('.reviews-slider').slick("setPosition")
+            $('.reviews-slider').slick('resize')
+            console.log('close');
+          
+        });
+        $(this).hide()
+            $(this).prev().show()
+    });
 });

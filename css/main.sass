@@ -27,18 +27,22 @@ body
 img
     max-width: 100% 
     
+// .container
+//     +minq(xl)
+//         max-width: 1510px 
+//     +mq(xl)
+//         max-width: 100%
 .container
-    +minq(xl)
+    +minq(1510px)
         max-width: 1510px 
     +mq(xl)
         max-width: 100%
-
 .btn
     font-size: 16px
     line-height: 15px
     font-family: gpb
     padding: 19px
-    display: flex
+    display: inline-flex
     align-items: center
     justify-content: center
     border-radius: 0
@@ -46,6 +50,11 @@ img
     text-decoration: none
     box-sizing: border-box
     transition: 0.3s
+    min-width: 230px 
+    +mq(xxl)
+        font-size: 15px
+    +mq(xl)
+        font-size: 14px
 
     &_black
         border: 1px solid #fff

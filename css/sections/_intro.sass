@@ -8,9 +8,17 @@
         flex-direction: column
         justify-content: center
         height: 100%
-        padding-top: 150px
+        min-height: calc( 100vh - 99px )
+        // padding-top: 150px
+        padding: 50px 0
     &__logo
         margin-bottom: 98px
+        +mq(xxl)
+            margin-bottom: 50px
+
+        img
+            +mq(xxl)
+                max-height: 130px
 
     &__title
         font-size: 72px
@@ -18,15 +26,21 @@
         font-family: gpb
         margin-bottom: 37px
         color: #fff
+        +mq(xxxl)
+            font-size: 60px
+        +mq(xxl)
+            font-size: 55px
+        +mq(lg)
+            font-size: 45px
     &__subtitle
         font-size: 18px
         line-height: 17px
         color: rgba(255, 255, 255, 0.7)
         margin-bottom: 52px
     &__btn
-        margin-bottom: 200px
+        // margin-bottom: 200px
         .btn
-            max-width: 230px
+            // max-width: 230px
 
     &__conteiner
         min-height: calc( 100vh - 99px ) 
@@ -87,3 +101,49 @@
             
                 &.slick-active
                     width: 8px
+                
+.reviews
+    height: 100%
+
+    &__slider
+        width: 505px
+        position: absolute
+        right: 60px
+        bottom: 230px
+    
+    &-item
+        background: rgba(255, 255, 255, 0.9)
+        padding: 25px 35px
+
+        &__head
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-bottom: 8px
+            position: relative
+            margin-bottom: 20px
+
+            &::after
+                content: ''
+                height: 1px
+                width: 150px
+                background: #000
+                position: absolute
+                bottom: 0
+                left: 0
+        &__name 
+            margin-bottom: 10px
+            p 
+                margin-bottom: 5px
+                font-family: gpb
+                font-size: 14px
+                line-height: 140%
+            span
+                font-style: italic
+        &__text
+            max-height: 75px
+            overflow: hidden
+            // transition: 0.3s
+
+.block-accessories__text--open
+    max-height: none 
