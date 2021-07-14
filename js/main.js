@@ -47,4 +47,17 @@ $( document ).ready(function() {
         $(".accordeon-item").removeClass("active");
         $(this).addClass("active");
     });
+
+    $('.more-btn').on('click', function () {
+        $(this).parent().fadeOut();
+        $('.projects-item__wrap').fadeIn()
+    })
+    $('.intro-bg-slider').slick({
+        arrows: false,
+        fade: true,
+        dots: true,
+        appendDots:$(".slick-navigation"),
+        autoplay:true,
+        autoplaySpeed:5000,
+    })
 });

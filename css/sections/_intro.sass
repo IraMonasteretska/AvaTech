@@ -1,2 +1,64 @@
 .intro
-    height: 100vh
+    height: calc( 100vh - 99px ) 
+    position: relative
+    margin-bottom: 100px
+
+    &__conteiner
+        height: calc( 100vh - 99px ) 
+        .container
+            height: 100%
+            position: relative
+        .col-lg-8
+            position: static
+
+    &-bg
+        display: flex
+        position: absolute
+        left: 0
+        bottom: 0
+        right: 0
+        top: 0
+
+    .intro-left-bg
+        flex: 0 0 34%
+        max-width: 34%
+        background: #000
+
+    .intro-bg-slider
+        flex: 0 0 66%
+        max-width: 66%
+
+        .slick-list,
+        .slick-track 
+            height: 100%
+
+        .slick-slide
+            img
+                height: 100%
+                object-fit: cover
+                width: 100%
+
+    .slick-navigation
+        position: absolute
+        z-index: 3
+        right: 15px
+        top: 50%
+        transform: translateY(-50%)
+
+        button
+            display: none
+        .slick-dots
+            list-style: none
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+
+            li
+                width: 3px
+                height: 40px
+                background: #fff
+                margin-bottom: 25px
+                cursor: pointer
+            
+                &.slick-active
+                    width: 8px
