@@ -1,13 +1,26 @@
 .products
+    margin-bottom: 100px
     &__title
         margin-bottom: 100px
     &__filter
         margin-bottom: 100px
 
+
+    &__more
+        padding-top: 50px
+        display: flex
+        justify-content: center
+        &-btn
+            display: flex
+            flex-direction: column
+            align-items: center
+            cursor: pointer
+            svg
+                margin-top: 20px
 .product
     border: 1px solid rgba(0, 0, 0, 0.05)
     // border: 1px solid #000000
-    margin-bottom: 30px
+    margin-bottom: 20px
     display: block
 
     &__img 
@@ -33,3 +46,25 @@
             color: #fff 
             background: #000 
             text-decoration: none
+            
+    
+.nice-select
+    border-radius: 0
+    width: 100%
+    border: 1px solid rgba(0, 0, 0, 0.7)
+    font-size: 16px
+    line-height: 55px
+    height: 55px
+    float: none
+    &::after
+        height: 15px
+        width: 15px
+        border-bottom: 1px solid rgba(0, 0, 0, 0.7)
+        border-right: 1px solid rgba(0, 0, 0, 0.7)
+        top: 20px
+        right: 20px
+
+    .list
+        right: 0
+        border-radius: 0
+        border: 1px solid rgba(0, 0, 0, 0.7)
