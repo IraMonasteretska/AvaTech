@@ -3,6 +3,8 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
+    $('.nice__select').niceSelect()
+
     function counter () {
         var statisticsCount = 0;
 
@@ -61,11 +63,32 @@ $( document ).ready(function() {
         autoplaySpeed:5000,
     })
 
-    $('.reviews-slider').slick({
-        adaptiveHeight: true
-        // dots: true,
+    // $('.reviews-slider').slick({
+    //     adaptiveHeight: true
+    //     // dots: true,
 
-    })
+    // })
+    function resizeSwiper() {
+        $('.swiper-container').height($('.block-accessories__text').height())
+    }
+    var swiper = new Swiper(".reviews-slider", {
+        slidesPerView: 1,
+        // autoHeight: true,
+       
+        // calculateHeight:true,
+       
+        // spaceBetween: 30,
+        // loop: true,
+        // autoplay: true,
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+        // navigation: {
+        //     nextEl: ".swiper-button-next",
+        //     prevEl: ".swiper-button-prev",
+        // },
+    });
 
 
     // $('.block-accessories__more .expand').on('click',function(e){
@@ -110,16 +133,16 @@ $( document ).ready(function() {
     
         c.animate({'maxHeight':h},function () {
             $(this).addClass('block-accessories__text--open')
-            
-            
         }, function () {
-            $('.reviews-slider').slick("setPosition")
-            $('.reviews-slider').slick('resize')
-          console.log('open');
-         
+        //     $('.reviews-slider').slick("setPosition")
+        //     $('.reviews-slider').slick('resize')
+        //   console.log('open');
+        window.dispatchEvent(new Event('resize'));
+        
         });
         $(this).hide()
-          $(this).next().show()
+        $(this).next().show()
+       
     });
 
     $('.block-accessories__more .collapse').on('click',function(e){
@@ -130,12 +153,15 @@ $( document ).ready(function() {
             $(this).removeClass('block-accessories__text--open')
             
         }, function () {
-            $('.reviews-slider').slick("setPosition")
-            $('.reviews-slider').slick('resize')
-            console.log('close');
+            // $('.reviews-slider').slick("setPosition")
+            // $('.reviews-slider').slick('resize')
+            // console.log('close');
+        window.dispatchEvent(new Event('resize'));
+     
           
         });
         $(this).hide()
-            $(this).prev().show()
+        $(this).prev().show()
+        
     });
 });

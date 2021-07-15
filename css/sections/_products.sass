@@ -1,0 +1,35 @@
+.products
+    &__title
+        margin-bottom: 100px
+    &__filter
+        margin-bottom: 100px
+
+.product
+    border: 1px solid rgba(0, 0, 0, 0.05)
+    // border: 1px solid #000000
+    margin-bottom: 30px
+    display: block
+
+    &__img 
+        text-align: center
+        img
+            object-fit: cover
+            height: 185px
+
+
+    &__name 
+        font-size: 22px
+        font-family: gpb
+        line-height: 145%
+        color: #000
+        text-align: center
+        background: #fff
+        padding: 15px 0
+        transition: 0.3s
+    
+    &:hover 
+        text-decoration: none
+        .product__name 
+            color: #fff 
+            background: #000 
+            text-decoration: none

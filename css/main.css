@@ -332,6 +332,11 @@
   height: 100%;
 }
 
+.reviews .slick-list {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .reviews__slider {
   width: 505px;
   position: absolute;
@@ -387,6 +392,10 @@
 .reviews-item__text {
   max-height: 75px;
   overflow: hidden;
+}
+
+.block-accessories__more {
+  text-align: center;
 }
 
 .block-accessories__text--open {
@@ -710,6 +719,10 @@
   opacity: 0;
 }
 
+.projects {
+  margin-bottom: 100px;
+}
+
 .projects__title {
   margin-bottom: 100px;
 }
@@ -998,6 +1011,120 @@
 
 .projects__more .more-btn svg {
   margin-top: 20px;
+}
+
+.subscribe {
+  background: #000;
+  padding: 60px 0;
+  margin-bottom: 100px;
+}
+
+.subscribe__title {
+  color: #fff;
+  font-size: 36px;
+  line-height: 145%;
+  font-family: gpl;
+}
+
+.subscribe__title span {
+  font-family: gpb;
+}
+
+.subscribe__form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.subscribe__form-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc( 50% - 10px);
+}
+
+.subscribe__form-inputs input {
+  padding: 10px;
+  background: none;
+  margin-bottom: 20px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.subscribe__form-btn {
+  width: calc( 50% - 10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+.subscribe__img {
+  position: absolute;
+  top: -60px;
+  right: 0;
+}
+
+.products__title {
+  margin-bottom: 100px;
+}
+
+.products__filter {
+  margin-bottom: 100px;
+}
+
+.product {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  display: block;
+}
+
+.product__img {
+  text-align: center;
+}
+
+.product__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 185px;
+}
+
+.product__name {
+  font-size: 22px;
+  font-family: gpb;
+  line-height: 145%;
+  color: #000;
+  text-align: center;
+  background: #fff;
+  padding: 15px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product:hover {
+  text-decoration: none;
+}
+
+.product:hover .product__name {
+  color: #fff;
+  background: #000;
+  text-decoration: none;
 }
 
 @font-face {
