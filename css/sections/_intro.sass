@@ -3,6 +3,29 @@
     position: relative
     margin-bottom: 100px
 
+    &__scroll
+        position: absolute
+        bottom: 100px
+        left: 50%   
+        transform: translate(-50%, 0)
+        // right: 0
+        display: flex
+        z-index: 3
+        justify-content: center
+        cursor: pointer
+        .scrol-down
+            display: flex
+            flex-direction: column
+            align-items: center
+            color: #fff
+
+            svg 
+                -webkit-animation: mover 1s infinite  alternate
+                animation: mover 1s infinite  alternate
+
+            span
+                margin-top: 5px
+
     &__cont
         display: flex
         flex-direction: column
@@ -112,7 +135,8 @@
         width: 505px
         position: absolute
         right: 60px
-        bottom: 230px
+        // bottom: 230px
+        top: 40%
     
     &-item
         background: rgba(255, 255, 255, 0.9)
@@ -150,6 +174,30 @@
             
 .block-accessories__more
     text-align: center
-
+    cursor: pointer
+    position: relative
+    &::after
+        display: block
+        width: 100%
+        height: 30px
+        // content: ''
+        position: absolute
+        top: -30px
+        left: 0
+        z-index: 1
+        background: -webkit-gradient(linear,left top,left bottom,from(rgba(248,248,248,0)),color-stop(50%,#fff))
+        background: linear-gradient(to bottom,rgba(255, 255, 255, 0.9) 0,rgba(255, 255, 255, 0.9) 50%)
 .block-accessories__text--open
     max-height: none 
+
+
+@-webkit-keyframes mover 
+    0%
+        transform: translateY(0)
+    100%  
+        transform: translateY(-10px)
+@keyframes mover 
+    0%
+        transform: translateY(0)
+    100%  
+        transform: translateY(-10px)

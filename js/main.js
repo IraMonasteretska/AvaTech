@@ -22,6 +22,15 @@ $( document ).ready(function() {
         }
     });
 
+    $(".scrol-down").on("click", function (event) {
+        event.preventDefault();
+    
+        var id = $(this).attr("href"),
+          top = $(id).offset().top - 100;
+    
+        $("body,html").animate({ scrollTop: top }, 1000);
+    });
+
     $('.nice__select').niceSelect()
 
     $('#contacts_select').on('change', function () {
