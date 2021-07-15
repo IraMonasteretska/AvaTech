@@ -3,6 +3,25 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
+    $(".top-btn").click(function () {
+        $("html, body").animate(
+            {
+                scrollTop: 0,
+            },
+            1000
+        );
+        return false;
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop()>400) {
+            $('.top-btn').fadeIn();
+        }
+        else {
+            $('.top-btn').fadeOut();
+        }
+    });
+
     $('.nice__select').niceSelect()
 
     $('#contacts_select').on('change', function () {

@@ -493,6 +493,12 @@
   left: calc(50% - 10px);
 }
 
+.about__items .about-item__text {
+  font-size: 15px;
+  max-width: 145px;
+  margin: 0 auto;
+}
+
 .about__items .row > div:nth-child(4) .about-item {
   color: #fff;
 }
@@ -1631,6 +1637,41 @@ textarea {
 
 .footer__icons a:hover {
   opacity: 1;
+}
+
+.footer__copy {
+  margin-top: 60px;
+  padding: 42px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer__copy a, .footer__copy span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__copy span {
+  margin-right: 66px;
+}
+
+.footer .top-btn {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  position: fixed;
+  bottom: 125px;
+  right: 115px;
+  z-index: 3;
 }
 
 @font-face {
