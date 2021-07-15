@@ -79,3 +79,19 @@ img
     &_white
         background: #fff
         color: #000
+    &_white_b
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            top: 0
+            border: 1px solid #fff
+            transition: 0.3s
+
+        &:hover
+            transform: translate(10px, 10px)
+            &::after
+                transform: translate(-10px, -10px)

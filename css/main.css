@@ -1876,4 +1876,30 @@ img {
   background: #fff;
   color: #000;
 }
+
+.btn_white_b {
+  position: relative;
+}
+
+.btn_white_b::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 1px solid #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn_white_b:hover {
+  -webkit-transform: translate(10px, 10px);
+          transform: translate(10px, 10px);
+}
+
+.btn_white_b:hover::after {
+  -webkit-transform: translate(-10px, -10px);
+          transform: translate(-10px, -10px);
+}
 /*# sourceMappingURL=main.css.map */
