@@ -5,6 +5,13 @@ $( document ).ready(function() {
 
     $('.nice__select').niceSelect()
 
+    $('#contacts_select').on('change', function () {
+        let active = $(this).val();
+        $('.footer__contact-list').removeClass('active')
+        $('.footer__contact-list[data-list="'+ active +'"]').addClass('active')
+        console.log(active);
+    })
+
     function counter () {
         var statisticsCount = 0;
 

@@ -1,6 +1,9 @@
 /* FIND a Store */
 
-.findstore-section 
+.findstore-section
+    margin-bottom: 100px
+    &__title
+        margin-bottom: 100px 
 
 .findstore__filter 
     padding-right: 60px
@@ -92,36 +95,46 @@
 
 .findstore__shops 
     overflow: hidden
-    height: 695px
+    height: 605px
+    position: relative
     +mq(xxl)
         height: 640px
     +mq(md)
         height: 415px
         margin-bottom: 30px
 
+    &::after
+        // content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 100px
+        background: linear-gradient(360deg, #FFFFFF 50%, rgba(255, 255, 255, 0.479) 100%)
+
 .findstore__shops-wrap::-webkit-scrollbar 
-    width: 6px
+    width: 7px
 
 
 .findstore__shops-wrap::-webkit-scrollbar-track 
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05)
-    background: #F2F2F2
+    background: #F3F3F3
     box-sizing: content-box
 
 
 .findstore__shops-wrap::-webkit-scrollbar-thumb 
-    background-color: #000
+    background-color: #DFDFDF
     border-radius: 10px
     -webkit-border-radius: 10px
     -moz-border-radius: 10px
     -ms-border-radius: 10px
     -o-border-radius: 10px
-    border: 2px solid #F2F2F2
+    border: 2px solid #F3F3F3
     border-right-width: 0
 
 
 .map-wrapper 
-    height: 800px
+    height: 710px
     overflow: hidden
     +mq(xxl)
         height: 650px
@@ -130,16 +143,6 @@
 
 .map-wrapper #map 
     height: 100%
-
-// .gm-style-iw-a
-//     .title
-//         font-weight: bold
-//     .direction
-//         display: none
-//     .col
-//         li 
-//             margin-bottom: 5px
-
 
 .cluster,
 .cluster * 
@@ -187,6 +190,7 @@
 .findstore__mapsect .gm-style-iw button 
     right: 0 !important
     top: 0 !important
+    outline: none !important
 
 
 .no-items 
