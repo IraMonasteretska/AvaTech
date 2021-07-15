@@ -162,6 +162,7 @@ $( document ).ready(function() {
         e.preventDefault();
         
         var c = $(this).parent().prev();
+        $(this).parents('.reviews-item').addClass('open')
 
         var h = c.prop('scrollHeight') ;
         console.log(h);
@@ -182,6 +183,7 @@ $( document ).ready(function() {
 
     $('.block-accessories__more .collapse').on('click',function(e){
         e.preventDefault();
+        $(this).parents('.reviews-item').removeClass('open')
         var c = $(this).parent().prev();
         var h = 75;
         c.animate({'maxHeight':h},function () {
