@@ -8,6 +8,8 @@
             min-width: 78px
     &__menu
         height: 100%
+        +mq(lg)
+            display: none
         ul
             display: flex
             align-items: center
@@ -19,6 +21,7 @@
 
             li 
                 position: relative
+                padding: 0 10px
                 &::after
                     content: ""
                     position: absolute
@@ -51,14 +54,20 @@
     &__contacts
         display: flex
         align-items: center
-        justify-content: space-around
+        justify-content: space-between
         height: 100%
+        padding-left: 60px
     
     &__phone
         color: #fff
         font-family: gpb
+        img 
+            animation: phone-animate 3s infinite ease-in-out
+            margin-left: 5px
     &__soc
         display: flex
+        +mq(lg)
+            display: none
         a
             margin: 0 8px
 
@@ -72,7 +81,8 @@
     
 
     &__lang 
-
+        +mq(lg)
+            display: none
         ul
             display: flex
             list-style: none
@@ -112,4 +122,25 @@
                     text-decoration: none
                     color: rgba(255, 255, 255, 0.7)
 
-               
+
+@keyframes phone-animate
+    0% 
+        transform: rotate(0) 
+    
+    10% 
+        transform: rotate(-15deg)
+    
+    20% 
+        transform: rotate(15deg) 
+    30% 
+        transform: rotate(-15deg)
+    
+    40% 
+        transform: rotate(15deg) 
+    
+    50% 
+        transform: rotate(0) 
+    
+    100% 
+        transform: rotate(0)
+    

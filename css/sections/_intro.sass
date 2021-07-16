@@ -2,6 +2,8 @@
     min-height: calc( 100vh - 99px ) 
     position: relative
     margin-bottom: 100px
+    +mq(lg)
+        margin-bottom: 50px
 
     &__scroll
         position: absolute
@@ -13,11 +15,15 @@
         z-index: 3
         justify-content: center
         cursor: pointer
+        +mq(md)
+            display: none
         .scrol-down
             display: flex
             flex-direction: column
             align-items: center
             color: #fff
+            text-decoration: none
+
 
             svg 
                 -webkit-animation: mover 1s infinite  alternate
@@ -34,11 +40,20 @@
         min-height: calc( 100vh - 99px )
         // padding-top: 150px
         padding: 50px 0
+        +mq(md)
+            margin-left: -10px
+            margin-right: -10px
+            padding: 50px 10px
+            justify-content: flex-end
+            overflow: hidden
+
+            // background: rgba(0, 0, 0, 0.7)
     &__logo
         margin-bottom: 98px
         +mq(xxl)
             margin-bottom: 50px
-
+        +mq(md)
+            display: none
         img
             +mq(xxl)
                 max-height: 130px
@@ -49,6 +64,21 @@
         font-family: gpb
         margin-bottom: 37px
         color: #fff
+        position: relative
+        z-index: 2
+        span 
+            position: relative
+            z-index: 2
+        &::after
+            content: ''
+            position: absolute
+            left: -10px
+            bottom: -100vh
+            right: -10px
+            top: -30px
+            background: rgba(0, 0, 0, 0.7)
+            z-index: 1
+
         +mq(xxxl)
             font-size: 60px
         +mq(xxl)
@@ -60,7 +90,11 @@
         line-height: 17px
         color: rgba(255, 255, 255, 0.7)
         margin-bottom: 52px
+        position: relative
+        z-index: 2
     &__btn
+        position: relative
+        z-index: 2
         // margin-bottom: 200px
         .btn
             // max-width: 230px
@@ -85,10 +119,15 @@
         flex: 0 0 36%
         max-width: 36%
         background: #000
+        +mq(md)
+            display: none
 
     .intro-bg-slider
         flex: 0 0 64%
         max-width: 64%
+        +mq(md)
+            flex: 0 0 100%
+            max-width: 100%
 
         .slick-list,
         .slick-track 
@@ -127,7 +166,28 @@
                 
 .reviews
     height: 100%
+    +mq(md)
+        display: none
+    .slick-arrow 
+        cursor: pointer
+        position: absolute
+        transform: translateY(-50%)
+        top: 50%
+        height: 50px
+        width: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: rgba(0, 0, 0, 0.7)
+        
+    .slick-disabled
+        opacity: 0.3
+    .slick-rev-prev 
+        left: -50px
 
+    .slick-rev-next 
+        right: -50px
+        
     .slick-list 
         transition: 0.3s 
 
@@ -185,9 +245,11 @@
                 line-height: 140%
             span
                 font-style: italic
+                font-size: 13px
         &__text
             max-height: 75px
             overflow: hidden
+            font-size: 13px
             // transition: 0.3s
             
 .block-accessories__more
