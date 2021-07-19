@@ -1,9 +1,18 @@
 .footer
     background: #000
     padding-top: 100px
+    +mq(md)
+        padding-top: 50px
+    &__logo 
+        +mq(md)
+            margin-bottom: 50px
 
     &__menu
+        +mq(md)
+            margin-bottom: 50px
         ul 
+            +mq(md)
+                padding-left: 0
             li 
                 margin-bottom: 25px
                 a 
@@ -11,6 +20,8 @@
                     font-size: 15px
     &__contacts
         display: flex
+        +mq(md)
+            display: none
 
         .contact-list
             border-bottom: 1px solid rgba(255, 255, 255, 0.2)
@@ -87,9 +98,16 @@
         display: flex
         flex-direction: column
         align-items: flex-end
+        +mq(md)
+            align-items: flex-start
 
     &__btn 
         margin-bottom: 43px
+        +mq(md)
+            width: 100%
+            margin-bottom: 50px
+            .btn    
+                width: 100%
 
     &__icons
         a 
@@ -104,14 +122,20 @@
         margin-top: 60px
         padding: 42px 0
         border-top: 1px solid rgba(255, 255, 255, 0.5)
-
+        +mq(md)
+            margin-top: 50px
+            border: none
+            padding-top: 0
         a, span   
             color: rgba(255, 255, 255, 0.5)
             font-size: 14px
         
         span   
-            margin-right: 66px
 
+            margin-right: 66px
+            +mq(md)
+                display: block
+                margin-right: 0
     .top-btn
         cursor: pointer
         width: 45px

@@ -17,6 +17,12 @@
         cursor: pointer
         +mq(md)
             display: none
+         
+        +mq(xxl)
+            left: 40% 
+        +mq(lg)
+            left: 50%  
+
         .scrol-down
             display: flex
             flex-direction: column
@@ -46,6 +52,7 @@
             padding: 50px 10px
             justify-content: flex-end
             overflow: hidden
+            min-height: calc( 100vh - 75px ) 
 
             // background: rgba(0, 0, 0, 0.7)
     &__logo
@@ -85,7 +92,9 @@
         +mq(xxl)
             font-size: 55px
         +mq(lg)
-            font-size: 45px
+            font-size: 40px
+        +mq(md)
+            font-size: 48px
     &__subtitle
         font-size: 18px
         line-height: 17px
@@ -102,6 +111,9 @@
 
     &__conteiner
         min-height: calc( 100vh - 99px ) 
+        +mq(md)
+            min-height: calc( 100vh - 75px ) 
+
         .container
             height: 100%
             position: relative
@@ -146,6 +158,8 @@
         right: 15px
         top: 50%
         transform: translateY(-100%)
+        +mq(md)
+            display: none
 
         button
             display: none
@@ -167,7 +181,7 @@
                 
 .reviews
     height: 100%
-    +mq(md)
+    +mq(lg)
         display: none
     .slick-arrow 
         cursor: pointer
@@ -198,7 +212,8 @@
         right: 60px
         // bottom: 230px
         top: 52%
-    
+        +mq(xxl)
+            top: 40%
     &-item
         background: rgba(255, 255, 255, 0.9)
         padding: 25px 35px

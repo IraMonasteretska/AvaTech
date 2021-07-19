@@ -21,6 +21,18 @@ $at_black: #000
 body
     font-family: gp
 
+    &.hidden-scroll
+        overflow: hidden
+
+    &.home 
+        .header__wrapper
+            border-bottom: 1px solid #fff
+
+main 
+    padding-top: 99px
+    +mq(md)
+        padding-top: 75px
+
 .s-title
     text-align: center
     font-family: gpb
@@ -28,6 +40,10 @@ body
     line-height: 34px
     text-transform: uppercase
     color: $at_black
+    +mq(lg)
+        font-size: 30px
+    +mq(md)
+        font-size: 24px
 
 img
     max-width: 100% 

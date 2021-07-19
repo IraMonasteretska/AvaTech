@@ -1,9 +1,15 @@
 .products
     margin-bottom: 100px
+    +mq(md)
+        margin-bottom: 50px
     &__title
         margin-bottom: 100px
+        +mq(md)
+            margin-bottom: 50px
     &__filter
         margin-bottom: 100px
+        +mq(md)
+            margin-bottom: 50px
 
 
     &__more
@@ -28,7 +34,8 @@
         img
             object-fit: cover
             height: 185px
-
+            +mq(md)
+                height: 110px
 
     &__name 
         font-size: 22px
@@ -39,6 +46,8 @@
         background: #fff
         padding: 15px 0
         transition: 0.3s
+        +mq(md)
+            font-size: 14px
     
     &:hover 
         text-decoration: none
@@ -56,6 +65,8 @@
     line-height: 55px
     height: 55px
     float: none
+    +mq(md)
+        margin-bottom: 20px
     &::after
         height: 15px
         width: 15px

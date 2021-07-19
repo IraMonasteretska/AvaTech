@@ -6,20 +6,36 @@
     padding-bottom: 100px
     // background-repeat: no-repeat
     position: relative
+    +mq(md)
+        padding-top: 50px
+        padding-bottom: 300px
+        margin-bottom: 50px
+    .col-12
+        +mq(md)
+            position: static
     &__title
         font-family: gpb
         font-size: 36px
         line-height: 130%
         color: #fff
         margin-bottom: 10px
+        +mq(md)
+            font-size: 18px
+            text-align: center
     &__subtitle
         font-family: gpb
         font-size: 18px
         line-height: 145%
         color: #fff
         margin-bottom: 60px
+        +mq(md)
+            font-family: gp
+            font-size: 14px
+            text-align: center
     &__form-wrap
         padding-left: 60px
+        +mq(md)
+            padding-left: 0
     &__form
         display: flex
         flex-direction: column
@@ -31,5 +47,11 @@
         bottom: -100px
         left: 0
 
+        +mq(md)
+            bottom: 0
+            text-align: center
+            right: 0
         img
             width: 100%
+            +mq(md)
+                max-width: 480px

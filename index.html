@@ -14,7 +14,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApj8qSzyO4DqXeQtFQPKI4mi6p-MBwlpo&libraries=places"></script>
     <title>AvaTech</title>
 </head>
-<body>
+<body class="home ">
     <header class="header__wrapper">
         <div class="header">
             <div class="container">
@@ -22,11 +22,12 @@
                     <div class="col-lg-1 col-2">
                         <div class="header__logo">
                             <a href="#">
-                                <img src="./img/logo.svg" alt="logo">
+                                <img class="logo-big" src="./img/logo_icon.svg" alt="logo">
+                                <img class="logo-small" src="./img/logo_small.svg" alt="logo">
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-1">
+                    <div class="col-lg-5 col-1 header__menu-wrap">
                         <div class="header__menu">
                             <ul>
                                 <li class="current-menu-item ">
@@ -43,8 +44,35 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="header__soc_mob">
+                            <a href="#">
+                                <img src="./img/Icon_youtube.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_inst.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_fb.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_in.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="header__lang_mob">
+                            <ul>
+                                <li class="current-lang">
+                                    <a href="#">RU</a>
+                                </li>
+                                <li>
+                                    <a href="#">UA</a>
+                                </li>
+                                <li>
+                                    <a href="#">EN</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-lg-6 col-8">
+                    <div class="col-lg-6 col-10">
                         <div class="header__contacts">
                             <div class="header__phone">
                                 <span>Связаться с нами</span>
@@ -76,6 +104,10 @@
                                         <a href="#">EN</a>
                                     </li>
                                 </ul>
+                            </div>
+                            <div class="burger-menu">
+                                <img class="burger-menu_open" src="./img/burger.svg" alt="">
+                                <img class="burger-menu_close" src="./img/close.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -115,7 +147,7 @@
             <div class="intro__conteiner">
                 <div class="container ">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4">
                             <div class="intro__cont">
                                 <div class="intro__logo">
                                     <img src="./img/intro-logo.svg" alt="">
@@ -128,7 +160,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8">
                             <div class="reviews">
                                 <div class="reviews__slider">
                                     <div class="reviews-slider swiper-container">
@@ -259,8 +291,18 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about__video">
-                            <img src="./img/about_video.jpg" alt="">
+                            <!-- <img src="./img/about_video.jpg" alt=""> -->
+                            <video id="about_video" poster="./img/about_video.jpg" >
+
+                                <source src="./img/AVATECH.mp4"type="video/webm">
+                            
+                                <source src="./img/AVATECH.mp4" type="video/mp4">
+                            </video>
+                            <div class="about__video-play">
+                                <img src="./img/play.svg" alt="">
+                            </div>
                         </div>
+                        <!-- <div class="fullscreen">fullscreen</div> -->
                     </div>
                     <div class="col-lg-6">
                         <div class="about__text">
@@ -701,7 +743,7 @@
         <section class="subscribe">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-12">
                         <div class="subscribe__title">
                             <span>Подпишитесь</span> что бы получать
                             последние <span>новости</span> о нас
@@ -721,7 +763,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-12">
                         <div class="subscribe__img">
                             <img src="./img/sub-bg.png" alt="">
                         </div>
@@ -758,7 +800,7 @@
                 </div>
                 <div class="products__items">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct1.png" alt="">
@@ -766,7 +808,7 @@
                                 <div class="product__name">Jazz</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct2.png" alt="">
@@ -774,7 +816,7 @@
                                 <div class="product__name">Komo</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct3.png" alt="">
@@ -782,7 +824,7 @@
                                 <div class="product__name">Cube</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct4.png" alt="">
@@ -790,7 +832,7 @@
                                 <div class="product__name">Duo</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct3.png" alt="">
@@ -798,7 +840,7 @@
                                 <div class="product__name">Jazz</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct1.png" alt="">
@@ -806,7 +848,7 @@
                                 <div class="product__name">Komo</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct2.png" alt="">
@@ -814,7 +856,7 @@
                                 <div class="product__name">Cube</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct1.png" alt="">
@@ -822,7 +864,7 @@
                                 <div class="product__name">Duo</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct4.png" alt="">
@@ -830,7 +872,7 @@
                                 <div class="product__name">Jazz</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct3.png" alt="">
@@ -838,7 +880,7 @@
                                 <div class="product__name">Komo</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct1.png" alt="">
@@ -846,7 +888,7 @@
                                 <div class="product__name">Cube</div>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <a href="#" class="product">
                                 <div class="product__img">
                                     <img src="./img/roduct2.png" alt="">
@@ -870,12 +912,12 @@
         <section class="consultation">
             <div class="container">
                 <div class="row justify-content-end">
-                    <div class="col-lg-8">
+                    <div class="col-xl-8 col-lg-7 col-md-6 col-12">
                         <div class="consultation__bg">
                             <img src="./img/consultation_bg.png" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-12">
                         <div class="consultation__form-wrap">
                             <div class="consultation__title">
                                 Нужна консультация?

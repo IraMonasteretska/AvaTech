@@ -2,6 +2,77 @@
 				
 $( document ).ready(function() {
     console.log( "ready!" );
+    var player = document.querySelector('.about__video');
+
+    var video = document.querySelector('#about_video');
+    var playBtn = document.querySelector('.about__video-play');
+    // var fullscreenBtn =document.querySelector('.fullscreen'); 
+
+
+    function togglePlay() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();	
+        }
+        playBtn.classList.toggle('paused');
+        $('.about__video-play').fadeToggle(100)
+    }
+    function launchIntoFullscreen(element) {
+        if(element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if(element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if(element.webkitRequestFullscreen) {
+          element.webkitRequestFullscreen();
+        } else if(element.msRequestFullscreen) {
+          element.msRequestFullscreen();
+        }
+      }
+      function exitFullscreen() {
+        if(document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if(document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if(document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+      }
+
+    var fullscreen = false;
+    function toggleFullscreen() {
+        fullscreen ? exitFullscreen() : launchIntoFullscreen(player)
+        fullscreen = !fullscreen;
+    }
+
+    playBtn.addEventListener('click', togglePlay);
+    video.addEventListener('click', togglePlay);
+    // fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+    
+    $('.burger-menu').on('click', function(){
+        // var HeaderH = $( "header" ).height();
+        // let offsetTop = window.pageYOffset;
+        // let menuPos = HeaderH - offsetTop +11
+        // console.log(menuPos);
+
+
+        // $('.header__menu_mob').css('top',menuPos)
+        $('.header__menu-wrap').toggleClass('active')
+        $('body').toggleClass('hidden-scroll')
+        $('html').toggleClass('hidden-scroll')
+        $(this).toggleClass('active')
+
+    })
+
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+          $(".header__wrapper").addClass("fixed");
+        } else {
+          $(".header__wrapper").removeClass("fixed");
+        }
+    });
 
     $(".top-btn").click(function () {
         $("html, body").animate(

@@ -1,15 +1,62 @@
 .header
+    height: 100%
+    display: flex
+    align-items: center
     &__wrapper
         padding: 17px 0
         background: #000
+        position: fixed
+        left: 0
+        top: 0
+        right: 0
+        z-index: 5
+        height: 99px
+        +mq(md)
+            height: 75px
+        &.fixed
+            .logo-big
+                display: inline
+    .row
+        align-items: center
 
+    
     &__logo 
+        text-align: center
         img 
-            min-width: 78px
-    &__menu
-        height: 100%
-        +mq(lg)
+            +mq(md)
+                min-width: 38px
+
+        .logo-big
+            // transform: translateY(-20px)
             display: none
+            +mq(md)
+                display: inline-block
+        .logo-small
+            +mq(md)
+                display: none
+
+    &__menu
+        // height: 100%
+        &-wrap
+            +mq(lg)
+                position: fixed
+                min-height: calc( 100vh - 99px ) 
+                left: 0
+                bottom: 0
+                right: 0
+                top: 99px
+                flex: 0 0 100%
+                max-width: 100%
+                background: #000
+                overflow: scroll
+                transform: translateX(100%)
+                transition: 1s
+                &.active
+                    transform: translateX(0%)
+
+            +mq(md)
+                min-height: calc( 100vh - 75px )
+                top: 75px
         ul
             display: flex
             align-items: center
@@ -19,34 +66,51 @@
             margin: 0
             height: 100%
 
+            +mq(lg)
+                flex-direction: column
+                align-items: flex-start
+                padding-top: 70px
+                margin-bottom: 60px
+
             li 
                 position: relative
                 padding: 0 10px
-                &::after
-                    content: ""
-                    position: absolute
-                    width: 0
-                    height: 1px
-                    display: block
-                    right: 0
-                    bottom: -6px
-                    background: #fff
-                    transition: width .3s ease
-                    -webkit-transition: width .3s ease
-                &:hover
-                    a 
-                        color: #fff
+                +mq(lg)
+                    margin-bottom: 30px
+                a 
+                    color: #fff
+                    position: relative
+                    white-space: nowrap
+                    +mq(lg)
+                        font-size: 18px
+                        font-family: gpm
+                    +mq(lg)
+                        font-size: 15px
                     &::after
-                        width: 100%
-                        left: 0
-                        background: #ffffff
+                        content: ""
+                        position: absolute
+                        width: 0
+                        height: 1px
+                        display: block
+                        right: 0
+                        bottom: -6px
+                        background: #fff
+                        transition: width .3s ease
+                        -webkit-transition: width .3s ease
+                       
+                    &:hover
+                        &::after
+                            width: 100%
+                            left: 0
+                            background: #ffffff
                 &.current-menu-item 
-                    &::after
-                        width: 100%
-                        left: 0
-                        background: #ffffff
+                    
                     a 
                         color: #fff
+                        &::after
+                            width: 100%
+                            left: 0
+                            background: #ffffff
                 a 
                     transition: 0.3s
                     text-decoration: none
@@ -57,13 +121,38 @@
         justify-content: space-between
         height: 100%
         padding-left: 60px
-    
+        +mq(md)
+            padding-left: 0
+            justify-content: center
+            padding-right: 25px
+        +mq(xl)
+            padding-left: 30px
+        .burger-menu
+            display: none
+            +mq(lg)
+                display: block
+                position: absolute
+                right: 10px
+                top: 0
+
+            .burger-menu_close
+                display: none
+            
+            &.active
+                .burger-menu_close
+                    display: inline-block
+                .burger-menu_open
+                    display: none
+
+
     &__phone
         color: #fff
         font-family: gpb
         img 
             animation: phone-animate 3s infinite ease-in-out
             margin-left: 5px
+        +mq(xl)
+            font-size: 14px
     &__soc
         display: flex
         +mq(lg)
@@ -79,7 +168,21 @@
                 &:hover
                     opacity: 1
     
-
+        &_mob
+            display: none
+            +mq(lg)
+                padding-left: 10px
+                display: flex
+                margin-bottom: 58px
+            a 
+                margin-right: 17px
+                img
+                    display: flex
+                    justify-content: center
+                    opacity: 0.7
+                    transition: 0.3s
+                    &:hover
+                        opacity: 1
     &__lang 
         +mq(lg)
             display: none
@@ -121,6 +224,49 @@
                     transition: .3s 
                     text-decoration: none
                     color: rgba(255, 255, 255, 0.7)
+        &_mob
+            padding-bottom: 60px
+            display: none
+            +mq(lg)
+                display: block
+            ul
+                display: flex
+                list-style: none
+                padding: 0
+                margin: 0
+                li 
+                    margin-left: 10px
+                    position: relative
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 0
+                        height: 1px
+                        display: block
+                        right: 0
+                        bottom: -6px
+                        background: #fff
+                        transition: width .3s ease
+                        -webkit-transition: width .3s ease
+                    &:hover
+                        &::after
+                            width: 100%
+                            left: 0
+                            background: #ffffff
+                        a 
+                            color: #fff
+                    &.current-lang
+                        &::after
+                            width: 100%
+                            left: 0
+                            background: #ffffff
+                        a 
+                            color: #fff
+                    a 
+                        transition: .3s 
+                        text-decoration: none
+                        color: rgba(255, 255, 255, 0.7)
+            
 
 
 @keyframes phone-animate

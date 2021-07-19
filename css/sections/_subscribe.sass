@@ -2,13 +2,21 @@
     background: #000
     padding: 60px 0
     margin-bottom: 100px
-
+    position: relative
+    +mq(md)
+        padding-top: 260px
+    
+    .col-12
+        +mq(md)
+            position: static
     &__title
         color: #fff
         font-size: 36px
         line-height: 145%
         font-family: gpl
-
+        +mq(md)
+            font-size: 18px
+            text-align: center
         span 
             font-family: gpb
     
@@ -17,10 +25,14 @@
             display: flex
             justify-content: space-between
             align-items: flex-end
+            +mq(md)
+                flex-wrap: wrap
         &-inputs
             display: flex
             flex-direction: column
             width: calc( 50% - 10px )
+            +mq(md)
+                width: 100%
 
             input
                 padding: 10px
@@ -36,12 +48,21 @@
             display: flex
             justify-content: flex-end
             margin-bottom: 25px
+            +mq(md)
+                width: 100%
+                justify-content: center
     &__img
         position: absolute
         top: -60px
         right: 0
+        +mq(md)
+            top: 0
         img 
             width: 100%
+            +mq(md)
+                max-width: 380px
+        
+
 
 input,
 textarea
