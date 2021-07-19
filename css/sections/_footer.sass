@@ -1,17 +1,31 @@
 .footer
     background: #000
     padding-top: 100px
-    +mq(md)
+    +mq(lg)
+        position: relative
         padding-top: 50px
+        overflow: hidden
+        &::after
+            content: ''
+            width: 355px
+            height: 210px
+            background-image: url(../img/footer-bg.png)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position-x: 50px
+            position: absolute
+            top: 0
+            right: -0px
+            transform: rotate(25deg)
     &__logo 
-        +mq(md)
+        +mq(lg)
             margin-bottom: 50px
 
     &__menu
         +mq(md)
             margin-bottom: 50px
         ul 
-            +mq(md)
+            +mq(lg)
                 padding-left: 0
             li 
                 margin-bottom: 25px
@@ -20,7 +34,7 @@
                     font-size: 15px
     &__contacts
         display: flex
-        +mq(md)
+        +mq(lg)
             display: none
 
         .contact-list
@@ -98,7 +112,7 @@
         display: flex
         flex-direction: column
         align-items: flex-end
-        +mq(md)
+        +mq(lg)
             align-items: flex-start
 
     &__btn 

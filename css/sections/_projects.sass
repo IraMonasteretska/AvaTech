@@ -39,6 +39,8 @@
                     right: 0
                     top: 0
                     z-index: 2
+                    +mq(lg)
+                        display: none
                 &::after
                     content: ''
                     position: absolute
@@ -47,10 +49,13 @@
                     right: 0
                     top: 0
                     background: linear-gradient(360deg, rgba(9, 9, 9, 0.952298) 0%, #000000 0%, rgba(11, 11, 11, 0.945639) 0.01%, rgba(0, 0, 0, 0) 63.14%);
-
+                    
                 img 
                     height: 100%
                     object-fit: cover
+                a 
+                    position: relative
+                    z-index: 1
             &__title 
                 font-family: gpm
                 font-size: 22px
@@ -85,6 +90,8 @@
                 margin: auto 0
                 opacity: 0
                 z-index: 2
+                +mq(lg)
+                    display: none
             &__name
                 font-family: gpm
                 font-size: 36px
@@ -126,6 +133,9 @@
             &:hover
                 .projects-item__title
                     opacity: 0
+                    +mq(lg)
+                        opacity: 1
+
                 .projects-item__content
                     &::before
                         opacity: 1
