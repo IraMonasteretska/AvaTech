@@ -49,6 +49,7 @@
                 max-width: 100%
                 background: #000
                 overflow: scroll
+                overflow-x: auto
                 transform: translateX(100%)
                 transition: 1s
                 &.active
@@ -121,12 +122,13 @@
         justify-content: space-between
         height: 100%
         padding-left: 60px
-        +mq(md)
-            padding-left: 0
-            justify-content: center
-            padding-right: 25px
+       
         +mq(xl)
             padding-left: 30px
+        +mq(lg)
+            padding-left: 0
+            justify-content: center
+            padding-right: 17%
         .burger-menu
             display: none
             +mq(lg)

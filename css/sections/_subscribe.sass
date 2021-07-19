@@ -3,11 +3,13 @@
     padding: 60px 0
     margin-bottom: 100px
     position: relative
-    +mq(md)
+    +mq(lg)
         padding-top: 260px
+    +mq(md)
+        margin-bottom: 50px
     
     .col-12
-        +mq(md)
+        +mq(lg)
             position: static
     &__title
         color: #fff
@@ -48,18 +50,34 @@
             display: flex
             justify-content: flex-end
             margin-bottom: 25px
+            position: relative
             +mq(md)
                 width: 100%
                 justify-content: center
+            
+            img 
+                // margin-left: 30px
+                position: absolute
+                right: -70px
+                top: 50%
+                transform: translateY(-50%)
+                +mq(lg)
+                    position: static
+                    margin-left: 30px
+                    transform: translateY(-0%)
+
+
     &__img
         position: absolute
         top: -60px
         right: 0
-        +mq(md)
+        +mq(lg)
             top: 0
+            left: 0
+            text-align: center
         img 
             width: 100%
-            +mq(md)
+            +mq(lg)
                 max-width: 380px
         
 

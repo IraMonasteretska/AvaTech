@@ -15,7 +15,7 @@
         z-index: 3
         justify-content: center
         cursor: pointer
-        +mq(md)
+        +mq(lg)
             display: none
          
         +mq(xxl)
@@ -47,14 +47,14 @@
         // padding-top: 150px
         padding: 50px 0
         +mq(md)
-            margin-left: -10px
-            margin-right: -10px
+            margin-left: -20px
+            margin-right: -20px
             padding: 50px 10px
             justify-content: flex-end
             overflow: hidden
-            min-height: calc( 100vh - 75px ) 
+            min-height: auto
+            background: rgba(0, 0, 0, 0.7)
 
-            // background: rgba(0, 0, 0, 0.7)
     &__logo
         margin-bottom: 98px
         +mq(xxl)
@@ -73,19 +73,22 @@
         color: #fff
         position: relative
         z-index: 2
+        +mq(md)
+            margin-bottom: 23px
+            padding: 0 10px
         span 
             position: relative
             z-index: 2
         &::after
             +mq(md)
-                content: ''
-                position: absolute
-                left: -10px
-                bottom: -100vh
-                right: -10px
-                top: -30px
-                background: rgba(0, 0, 0, 0.7)
-                z-index: 1
+                // content: ''
+                // position: absolute
+                // left: -10px
+                // bottom: -100vh
+                // right: -10px
+                // top: -30px
+                // background: rgba(0, 0, 0, 0.7)
+                // z-index: 1
 
         +mq(xxxl)
             font-size: 60px
@@ -102,17 +105,27 @@
         margin-bottom: 52px
         position: relative
         z-index: 2
+        +mq(md)
+            margin-bottom: 23px
+            padding: 0 10px
+
     &__btn
         position: relative
         z-index: 2
         // margin-bottom: 200px
+        +mq(md)
+            padding: 0 10px
+
         .btn
-            // max-width: 230px
+            max-width: 100%
+            width: 100%
+            
 
     &__conteiner
         min-height: calc( 100vh - 99px ) 
         +mq(md)
             min-height: calc( 100vh - 75px ) 
+            padding-top: 20px
 
         .container
             height: 100%
@@ -158,7 +171,7 @@
         right: 15px
         top: 50%
         transform: translateY(-100%)
-        +mq(md)
+        +mq(lg)
             display: none
 
         button
@@ -181,8 +194,10 @@
                 
 .reviews
     height: 100%
+    +mq(md)
+        margin-top: 40px
     +mq(lg)
-        display: none
+        // display: none
     .slick-arrow 
         cursor: pointer
         position: absolute
@@ -194,14 +209,21 @@
         justify-content: center
         align-items: center
         background: rgba(0, 0, 0, 0.7)
+        +mq(md)
+            width: 40px
+            height: 40px
         
     .slick-disabled
         opacity: 0.3
     .slick-rev-prev 
         left: -50px
+        +mq(md)
+            left: 0
 
     .slick-rev-next 
         right: -50px
+        +mq(md)
+            right: 0
         
     .slick-list 
         transition: 0.3s 
@@ -214,12 +236,21 @@
         top: 52%
         +mq(xxl)
             top: 40%
+        +mq(md)
+            position: relative
+            top: 0
+            right: 0       
+            width: auto 
+            padding: 0 40px
+            margin-bottom: 50px
     &-item
         background: rgba(255, 255, 255, 0.9)
         padding: 25px 35px
         position: relative
         // box-shadow: 0px 8px 9px 0px rgba(34, 60, 80, 0.06)
         // padding-bottom: 10px
+        +mq(md)
+            padding: 16px 20px
         &::after
             display: block
             width: 100%
@@ -243,7 +274,9 @@
             padding-bottom: 8px
             position: relative
             margin-bottom: 20px
-
+            +mq(md)
+                margin-bottom: 4px
+                padding-bottom: 0
             &::after
                 content: ''
                 height: 1px
@@ -252,21 +285,39 @@
                 position: absolute
                 bottom: 0
                 left: 0
+                +mq(md)
+                    display: none
+        &__link
+            +mq(md)
+                margin-left: 40px
+            span 
+                +mq(md)
+                    display: none
         &__name 
             margin-bottom: 10px
+            +mq(md)
+                margin-bottom: 4px
             p 
                 margin-bottom: 5px
                 font-family: gpb
                 font-size: 14px
                 line-height: 140%
+
+                +mq(md)
+                    font-size: 13px
             span
                 font-style: italic
                 font-size: 13px
+                +mq(md)
+                    font-size: 12px
         &__text
             max-height: 75px
             overflow: hidden
             font-size: 13px
             // transition: 0.3s
+            +mq(md)
+                font-size: 11px
+
             
 .block-accessories__more
     text-align: center

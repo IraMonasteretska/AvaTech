@@ -3,7 +3,7 @@
 .services
     margin-bottom: 100px
     +mq(lg)
-            margin-bottom: 50px
+        margin-bottom: 50px
     &__title
         margin-bottom: 100px
         +mq(lg)
@@ -12,10 +12,15 @@
         padding-top: 56px
         padding-bottom: 40px
         background: #000
+        +mq(md)
+            padding-top: 25px
 .accordeon 
     width: 100%
     height: 100%
     display: flex
+    +mq(md)
+        flex-wrap: wrap
+        flex-direction: column
 
     &-item
         position: relative
@@ -26,6 +31,10 @@
         overflow: hidden
         cursor: pointer
         transition: 0.5s ease-out
+        +mq(md)
+            width: 100%
+            flex-direction: column
+
         &:hover
             .prev__title,
             .prev__numb
@@ -33,8 +42,16 @@
         
         &.active
             flex-grow: 10
+            +mq(md)
+                flex-grow: inherit
             .accordeon-item__prev
                 border-right: 2px solid rgb(255, 255, 255)
+                +mq(md)
+                    border-right: none
+                    border-bottom: 2px solid rgb(255, 255, 255)
+            .accordeon-item__content
+                +mq(md)
+                    // display: block
 
 
         &__prev
@@ -44,6 +61,13 @@
             z-index: 2
             min-width: 75px
             border-right: 2px solid rgba(255, 255, 255, 0.5)
+            +mq(md)
+                border-right: none
+                border-bottom: 2px solid rgb(255, 255, 255)
+                display: flex
+                flex-direction: row-reverse
+                justify-content: space-between
+                padding: 25px 0
 
             .prev__numb
                 font-family: gpb
@@ -52,6 +76,10 @@
                 line-height: 145%
                 color: rgba(255, 255, 255, 0.5)
                 transition: 0.3s
+                +mq(md)
+                    font-size: 18px
+                +mq(370px)
+                    font-size: 15px
 
             .prev__title
                 font-size: 24px
@@ -69,6 +97,13 @@
                 z-index: 2
                 +mq(xxl)
                     font-size: 20px
+                +mq(md)
+                    transform: rotate(0)
+                    position: static
+                    writing-mode: inherit
+                    font-size: 18px
+                +mq(370px)
+                    font-size: 15px
                 span
                     display: block
                     
@@ -82,6 +117,10 @@
             margin-bottom: 38px
             position: relative
             padding-left: 62px
+            +mq(md)
+                font-size: 18px
+                margin: 30px 0
+
 
             &::after
                 content: ''
@@ -97,6 +136,9 @@
             min-width: 395px
             line-height: 145%
             color: #FFFFFF
+            +mq(md)
+                max-width: none
+                min-width: auto
            
         &__content
             display: flex
@@ -111,6 +153,10 @@
             +mq(xxl)
                 justify-content: flex-start
                 padding-left: 15px
+            +mq(md)
+                display: none
+                transition: auto
+                padding: 0
 
             img
                 +mq(xxl)
@@ -119,10 +165,17 @@
                 +mq(xl)
                     min-width: 449px
                     min-height: 430px
+                +mq(md)
+                    min-width: auto
+                    min-height: auto
+           
         &-text
             padding-right: 100px
             +mq(xxl)
-            padding-right: 50px
+                padding-right: 50px
+            +mq(md)
+                padding-right: 0
+                
         &-img
             // width: 50%
 
@@ -136,4 +189,5 @@
 
 .accordeon .link:not(.active) .full_content 
     opacity: 0
-
+    +mq(md)
+        opacity: 1
