@@ -147,7 +147,7 @@ $( document ).ready(function() {
     $('.accordeon-item__content:first').slideDown()
 
     $(".accordeon-item__prev").bind("click", function() {
-        if (window.matchMedia("(max-width: 767px)").matches) {
+        if (window.matchMedia("(max-width: 991px)").matches) {
             if ($(this).parent().hasClass("true")) {
                 $(this).parent().find('.accordeon-item__content').slideUp()
                 $(this).parent().removeClass("true");

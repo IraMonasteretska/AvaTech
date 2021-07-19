@@ -18,7 +18,7 @@
     width: 100%
     height: 100%
     display: flex
-    +mq(md)
+    +mq(lg)
         flex-wrap: wrap
         flex-direction: column
 
@@ -31,7 +31,7 @@
         overflow: hidden
         cursor: pointer
         transition: 0.5s ease-out
-        +mq(md)
+        +mq(lg)
             width: 100%
             flex-direction: column
 
@@ -42,11 +42,11 @@
         
         &.active
             flex-grow: 10
-            +mq(md)
+            +mq(lg)
                 flex-grow: inherit
             .accordeon-item__prev
                 border-right: 2px solid rgb(255, 255, 255)
-                +mq(md)
+                +mq(lg)
                     border-right: none
                     border-bottom: 2px solid rgb(255, 255, 255)
             .accordeon-item__content
@@ -61,7 +61,7 @@
             z-index: 2
             min-width: 75px
             border-right: 2px solid rgba(255, 255, 255, 0.5)
-            +mq(md)
+            +mq(lg)
                 border-right: none
                 border-bottom: 2px solid rgb(255, 255, 255)
                 display: flex
@@ -97,7 +97,7 @@
                 z-index: 2
                 +mq(xxl)
                     font-size: 20px
-                +mq(md)
+                +mq(lg)
                     transform: rotate(0)
                     position: static
                     writing-mode: inherit
@@ -117,7 +117,7 @@
             margin-bottom: 38px
             position: relative
             padding-left: 62px
-            +mq(md)
+            +mq(lg)
                 font-size: 18px
                 margin: 30px 0
 
@@ -139,7 +139,7 @@
             +mq(1024px)
                 max-width: 345px
                 min-width: 345px
-            +mq(md)
+            +mq(lg)
                 max-width: none
                 min-width: auto
            
@@ -156,7 +156,7 @@
             +mq(xxl)
                 justify-content: flex-start
                 padding-left: 15px
-            +mq(md)
+            +mq(lg)
                 display: none
                 transition: auto
                 padding: 0
@@ -171,7 +171,7 @@
                 +mq(1024px)
                     min-width: 400px
                     min-height: 390px
-                +mq(md)
+                +mq(lg)
                     min-width: auto
                     min-height: auto
            
@@ -179,7 +179,7 @@
             padding-right: 100px
             +mq(xxl)
                 padding-right: 50px
-            +mq(md)
+            +mq(lg)
                 padding-right: 0
                 margin-bottom: 30px
         &-img
@@ -195,5 +195,5 @@
 
 .accordeon .link:not(.active) .full_content 
     opacity: 0
-    +mq(md)
+    +mq(lg)
         opacity: 1

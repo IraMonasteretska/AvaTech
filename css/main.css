@@ -1252,6 +1252,7 @@
 @media (max-width: 991px) {
   .about__statistics .statistics-item {
     max-width: 25%;
+    padding: 0 25px;
   }
 }
 
@@ -1291,6 +1292,12 @@
   .about__statistics .statistics-item__numb {
     font-size: 44px;
     line-height: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .about__statistics .statistics-item__numb {
+    font-size: 60px;
   }
 }
 
@@ -1515,7 +1522,7 @@
   display: flex;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1539,7 +1546,7 @@
   transition: 0.5s ease-out;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -1560,7 +1567,7 @@
           flex-grow: 10;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item.active {
     -webkit-box-flex: inherit;
         -ms-flex-positive: inherit;
@@ -1572,7 +1579,7 @@
   border-right: 2px solid white;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item.active .accordeon-item__prev {
     border-right: none;
     border-bottom: 2px solid white;
@@ -1588,7 +1595,7 @@
   border-right: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item__prev {
     border-right: none;
     border-bottom: 2px solid white;
@@ -1654,7 +1661,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item__prev .prev__title {
     -webkit-transform: rotate(0);
             transform: rotate(0);
@@ -1686,7 +1693,7 @@
   padding-left: 62px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item__title {
     font-size: 18px;
     margin: 30px 0;
@@ -1718,7 +1725,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item__text {
     max-width: none;
     min-width: auto;
@@ -1753,7 +1760,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item__content {
     display: none;
     -webkit-transition: auto;
@@ -1783,7 +1790,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item__content img {
     min-width: auto;
     min-height: auto;
@@ -1800,7 +1807,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon-item-text {
     padding-right: 0;
     margin-bottom: 30px;
@@ -1819,7 +1826,7 @@
   opacity: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .accordeon .link:not(.active) .full_content {
     opacity: 1;
   }
