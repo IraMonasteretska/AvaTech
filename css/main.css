@@ -64,6 +64,12 @@
   display: none;
 }
 
+@media (max-width: 1440px) {
+  .header__logo .logo-big {
+    width: 32px;
+  }
+}
+
 @media (max-width: 767px) {
   .header__logo .logo-big {
     display: inline-block;
