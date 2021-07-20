@@ -45,9 +45,13 @@ $( document ).ready(function() {
         fullscreen = !fullscreen;
     }
 
-    playBtn.addEventListener('click', togglePlay);
-    video.addEventListener('click', togglePlay);
+    if (player) {
+        playBtn.addEventListener('click', togglePlay);
+        video.addEventListener('click', togglePlay);
     // fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+    }
+    
 
     
     $('.burger-menu').on('click', function(){
