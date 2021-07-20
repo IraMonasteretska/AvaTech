@@ -266,7 +266,7 @@ $( document ).ready(function() {
         e.preventDefault();
         $(this).parents('.reviews-item').removeClass('open')
         var c = $(this).parent().prev();
-        var h = 75;
+        var h = 60;
         c.animate({'maxHeight':h},function () {
             $(this).removeClass('block-accessories__text--open')
             

@@ -11,8 +11,11 @@
         right: 0
         z-index: 5
         height: 99px
+        +mq(xxl)
+            height: 82px
         +mq(md)
             height: 75px
+        
         &.fixed
             .logo-big
                 display: inline
@@ -22,6 +25,10 @@
     
     &__logo 
         text-align: center
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        min-width: 105px
         img 
             +mq(md)
                 min-width: 38px
@@ -32,19 +39,28 @@
             +mq(md)
                 display: inline-block
         .logo-small
+            width: 105px
+            max-width: 105px
             +mq(md)
                 display: none
 
     &__menu
         // height: 100%
+        padding-left: 40px
+        padding-right: 23px
+        +mq(lg)
+            padding: 0
+        +mq(xxl)
+            padding-right: 0
         &-wrap
+        
             +mq(lg)
                 position: fixed
-                min-height: calc( 100vh - 99px ) 
+                min-height: calc( 100vh - 82px ) 
                 left: 0
                 bottom: 0
                 right: 0
-                top: 99px
+                top: 82px
                 flex: 0 0 100%
                 max-width: 100%
                 background: #000
@@ -76,17 +92,19 @@
             li 
                 position: relative
                 padding: 0 10px
+                display: flex
                 +mq(lg)
                     margin-bottom: 30px
                 a 
                     color: #fff
                     position: relative
                     white-space: nowrap
+                    +mq(xxl)
+                        font-size: 14px
                     +mq(lg)
                         font-size: 18px
                         font-family: gpm
-                    +mq(lg)
-                        font-size: 15px
+                    
                     &::after
                         content: ""
                         position: absolute
@@ -154,7 +172,7 @@
             animation: ring 4s .7s infinite ease-in-out
             margin-left: 5px
             // transform-origin: 20% 4px
-        +mq(xl)
+        +mq(xxl)
             font-size: 14px
     &__soc
         display: flex
@@ -227,6 +245,8 @@
                     transition: .3s 
                     text-decoration: none
                     color: rgba(255, 255, 255, 0.7)
+                    +mq(xxl)
+                        font-size: 13px
         &_mob
             padding-bottom: 60px
             display: none
