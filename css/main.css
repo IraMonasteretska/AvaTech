@@ -55,6 +55,12 @@
 }
 
 @media (max-width: 767px) {
+  .header__logo {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 767px) {
   .header__logo img {
     min-width: 38px;
   }
