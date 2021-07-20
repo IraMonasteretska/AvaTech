@@ -8,6 +8,8 @@
         padding-left: 20px
         position: relative
         margin-bottom: 30px
+
+        @include dynamic-block("a", 100%, 82%)
         +mq(lg)
             margin-bottom: 20px
         +mq(md)
@@ -26,10 +28,16 @@
             +mq(md)
                 right: 10px
                 bottom: 10px
+        a
+            display: block
+            padding-top: 20px
+            padding-left: 20px
         img
             position: relative
             z-index: 2 
             width: 100%
+            object-fit: cover
+            height: 100%
     
     &__title
         padding-left: 20px
@@ -37,6 +45,10 @@
         line-height: 145%
         font-family: gpb
         margin-bottom: 10px
+        color: #000
+        &:hover
+            text-decoration: none
+            color: #000
     
     &__text
         padding-left: 20px
@@ -49,9 +61,12 @@
         &:hover
             text-decoration: none
             color: #000
+            span 
+                margin-right: 30px
 
         span 
             font-family: gpm
             font-size: 16px
             line-height: 15px
             margin-right: 20px
+            transition: .3s

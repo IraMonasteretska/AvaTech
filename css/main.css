@@ -810,12 +810,6 @@
   }
 }
 
-@media (max-width: 1440px) {
-  .intro__scroll {
-    left: 40%;
-  }
-}
-
 @media (max-width: 991px) {
   .intro__scroll {
     left: 50%;
@@ -3563,11 +3557,12 @@ textarea {
   background: rgba(0, 0, 0, 0.7);
   display: inline-block;
   padding: 40px;
-  max-width: 480px;
+  min-width: 480px;
 }
 
 @media (max-width: 991px) {
   .about-intro__title {
+    min-width: auto;
     padding: 20px;
   }
 }
@@ -3834,6 +3829,22 @@ textarea {
   padding-left: 20px;
   position: relative;
   margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.solution__img:before {
+  content: "";
+  display: block;
+  padding-top: 82%;
+}
+
+.solution__img a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 @media (max-width: 991px) {
@@ -3868,10 +3879,19 @@ textarea {
   }
 }
 
+.solution__img a {
+  display: block;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
 .solution__img img {
   position: relative;
   z-index: 2;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 
 .solution__title {
@@ -3880,6 +3900,12 @@ textarea {
   line-height: 145%;
   font-family: gpb;
   margin-bottom: 10px;
+  color: #000;
+}
+
+.solution__title:hover {
+  text-decoration: none;
+  color: #000;
 }
 
 .solution__text {
@@ -3898,11 +3924,17 @@ textarea {
   color: #000;
 }
 
+.solution__link:hover span {
+  margin-right: 30px;
+}
+
 .solution__link span {
   font-family: gpm;
   font-size: 16px;
   line-height: 15px;
   margin-right: 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @font-face {

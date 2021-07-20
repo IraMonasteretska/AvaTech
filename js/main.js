@@ -178,16 +178,22 @@ $( document ).ready(function() {
         fade: true,
         dots: true,
         appendDots:$(".slick-navigation"),
-        autoplay:true,
-        autoplaySpeed:5000,
+        infinite: false,
+
+        // autoplay:true,
+        // autoplaySpeed:5000,
+        asNavFor: ".swiper-wrapper",
     })
 
     $('.swiper-wrapper').slick({
         // adaptiveHeight: true
         // dots: true,
         infinite: false,
+        // autoplay:true,
+        // autoplaySpeed:5000,
         prevArrow: $('.slick-rev-prev'),
         nextArrow: $('.slick-rev-next'),
+        asNavFor: ".intro-bg-slider",
     })
     // function resizeSwiper() {
     //     $('.swiper-container').height($('.block-accessories__text').height())
