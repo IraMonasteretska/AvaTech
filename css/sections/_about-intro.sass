@@ -1,0 +1,51 @@
+.about-intro
+    position: relative
+    margin-bottom: 50px
+
+    &__container
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        display: flex
+        align-items: center
+        .container
+            position: relative
+        .slick-navigation
+            position: absolute
+            z-index: 3
+            right: 15px
+            top: 50%
+            transform: translateY(-50%)
+            +mq(lg)
+                display: none
+
+            button
+                display: none
+            .slick-dots
+                list-style: none
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+
+                li
+                    width: 3px
+                    height: 40px
+                    background: #fff
+                    margin-bottom: 25px
+                    cursor: pointer
+                
+                    &.slick-active
+                        width: 8px
+    &__title
+        background: rgba(0, 0, 0, 0.7)
+        display: inline-block
+        padding: 40px
+        h1 
+            color: #fff
+            font-family: gpb
+            font-size: 64px
+            line-height: 61px
+
+    
