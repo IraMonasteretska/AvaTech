@@ -108,6 +108,7 @@ $( document ).ready(function() {
         console.log(active);
     })
 
+    var aboutStatistics = $('.about__statistics')
     function counter () {
         var statisticsCount = 0;
 
@@ -138,7 +139,9 @@ $( document ).ready(function() {
     
         })
     }
-    counter()
+    if (aboutStatistics.length) {
+        counter()
+    }
 
     // aos animation
     AOS.init({

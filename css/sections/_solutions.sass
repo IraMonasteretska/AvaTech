@@ -1,8 +1,31 @@
+.solutions
+    margin-bottom: 100px
+    +mq(md)
+        margin-bottom: 50px
+    &__more
+        padding-top: 50px
+        display: flex
+        justify-content: center
+        .solutions_more-btn
+            display: flex
+            flex-direction: column
+            align-items: center
+            cursor: pointer
+            svg
+                margin-top: 20px
+                transition: .3s
+            
+            &:hover
+                svg
+                    transform: translateY(10px)
+
 .solution
     display: flex
     flex-direction: column
     height: 100%
     padding-bottom: 110px
+    +mq(md)
+        padding-bottom: 60px
     &__img
         padding-top: 20px
         padding-left: 20px
