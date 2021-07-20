@@ -12,6 +12,7 @@
 @import 'sections/consultation'
 @import 'sections/footer'
 @import 'sections/about-intro'
+@import 'sections/about-services'
 
 $at_black: #000
 
@@ -35,7 +36,24 @@ main
         padding-top: 82px
     +mq(md)
         padding-top: 75px
-
+.breadcrumbs
+    display: flex
+    align-items: center
+    color: rgba(3, 3, 3, 0.5)
+    margin-bottom: 50px
+    span
+        font-family: gpm
+        color: rgba(3, 3, 3, 0.2)
+        font-size: 16px
+        line-height: 140%
+        margin: 0 11px
+        &:nth-child(1)
+            margin-left: 0
+            
+        a
+            color: rgba(3, 3, 3, 0.5)
+            &:hover
+                text-decoration: none
 .s-title
     text-align: center
     font-family: gpb

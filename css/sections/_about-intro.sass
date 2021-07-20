@@ -2,6 +2,14 @@
     position: relative
     margin-bottom: 50px
 
+    &__slider
+        .about-intro-slide
+            img
+                +mq(lg)
+                    min-height: 230px
+                    object-fit: cover
+
+
     &__container
         position: absolute
         left: 0
@@ -42,10 +50,24 @@
         background: rgba(0, 0, 0, 0.7)
         display: inline-block
         padding: 40px
+        +mq(lg)
+            padding: 20px
         h1 
             color: #fff
             font-family: gpb
             font-size: 64px
             line-height: 61px
+            +mq(xxxl)
+                font-size: 54px
+                line-height: 32px
+            +mq(xxl)
+                font-size: 44px
+                line-height: 32px
+            +mq(lg)
+                font-size: 30px
+                line-height: 32px
+            +mq(md)
+                font-size: 22px
+                line-height: 22px
 
     

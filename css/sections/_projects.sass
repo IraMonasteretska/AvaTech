@@ -199,3 +199,32 @@
                 margin-top: 20px
 
 
+.title-projects
+    margin-bottom: 45px
+    overflow: hidden
+    h2
+        font-size: 36px
+        line-height: 145%
+        font-family: gpb
+        position: relative
+        display: inline-block
+        margin: 0
+        +mq(xxl)
+            font-size: 32px
+        +mq(lg)
+            font-size: 24px
+        +mq(md)
+            font-size: 20px
+            line-height: 20px
+        &::after
+            content: ''
+            height: 1px
+            width: 100vw
+            background: #000
+            display: block
+            position: absolute
+            // right: -30px
+            left: calc(100% + 50px)
+            top: 50%
+            +mq(md)
+                left: calc(100% + 20px)
