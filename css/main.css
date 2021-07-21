@@ -4263,6 +4263,37 @@ textarea {
   top: 130px;
 }
 
+.single-solution {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  .single-solution {
+    margin-bottom: 50px;
+  }
+}
+
+.single-solution__title {
+  font-size: 64px;
+  line-height: 61px;
+  font-family: gpb;
+  margin-bottom: 24px;
+}
+
+.single-solution__subtitle {
+  font-family: gpm;
+  font-size: 16px;
+  line-height: 145%;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 30px;
+}
+
+.single-solution__content {
+  font-size: 15px;
+  line-height: 22px;
+}
+
 @font-face {
   font-family: "gpb";
   src: url("fonts/GothamPro-Bold.ttf") format("truetype");
