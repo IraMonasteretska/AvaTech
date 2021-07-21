@@ -2,6 +2,7 @@
     height: 100%
     display: flex
     align-items: center
+    z-index: 10
     &__wrapper
         padding: 17px 0
         background: #000
@@ -9,7 +10,7 @@
         left: 0
         top: 0
         right: 0
-        z-index: 5
+        z-index: 10
         height: 99px
         +mq(xxl)
             height: 82px
@@ -17,8 +18,16 @@
             height: 75px
         
         &.fixed
+            .header__logo
+                
             .logo-big
-                display: inline
+                opacity: 1
+                visibility: visible
+                // display: inline
+                transform: translateY(0px)
+            .logo-small
+                transform: translateY(0px)
+
     .row
         align-items: center
 
@@ -29,6 +38,9 @@
         flex-wrap: wrap
         justify-content: center
         min-width: 105px
+        transition: .3s
+        // transform: translateY(-20px)
+
         +mq(md)
            min-width: auto
         img 
@@ -36,17 +48,33 @@
                 min-width: 38px
 
         .logo-big
-            // transform: translateY(-20px)
-            display: none
+            transform: translateY(-22px)
+            // display: none
+            transition: .3s
+            opacity: 0
+            visibility: hidden
             +mq(xxl)
                 width: 32px
+                transform: translateY(-20px)
+
             +mq(md)
                 display: inline-block
+                opacity: 1
+                transform: translateY(0)
+                visibility: visible
         .logo-small
             width: 105px
             max-width: 105px
+            transition: .3s
+            transform: translateY(-22px)
+            +mq(xxl)
+                transform: translateY(-20px)
+                
+
             +mq(md)
                 display: none
+                opacity: 0
+                visibility: hidden
 
     &__menu
         // height: 100%

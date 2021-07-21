@@ -49,7 +49,6 @@ $( document ).ready(function() {
         playBtn.addEventListener('click', togglePlay);
         video.addEventListener('click', togglePlay);
     // fullscreenBtn.addEventListener('click', toggleFullscreen);
-
     }
     
 
@@ -274,6 +273,25 @@ $( document ).ready(function() {
         appendDots:$(".slick-navigation"),
         autoplay:true,
         autoplaySpeed:5000,
+    })
+
+    $('.solution-intro-slider').slick({
+        prevArrow: $('.solution-slider-prev'),
+        nextArrow: $('.solution-slider-next'),
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        autoplaySpeed:5000,
+        asNavFor: ".solution-intro-slider_nav",
+    })
+    $('.solution-intro-slider_nav').slick({
+        arrows: false,
+        slidesToShow: 4,
+        dots: false,
+        autoplaySpeed:5000,
+        asNavFor: ".solution-intro-slider",
+        focusOnSelect: true
+
     })
 
 });
