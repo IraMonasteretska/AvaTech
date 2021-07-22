@@ -3,6 +3,10 @@
     display: flex
     align-items: center
     z-index: 10
+    &_row
+        display: flex
+        justify-content: space-between
+        align-items: center
     &__wrapper
         padding: 17px 0
         background: #000
@@ -19,11 +23,10 @@
         
         &.fixed
             .header__logo
-                
+              
             .logo-big
                 opacity: 1
                 visibility: visible
-                // display: inline
                 transform: translateY(0px)
             .logo-small
                 transform: translateY(0px)
@@ -33,6 +36,8 @@
 
     
     &__logo 
+        max-width: 105px
+
         text-align: center
         display: flex
         flex-wrap: wrap
@@ -78,8 +83,8 @@
 
     &__menu
         // height: 100%
-        padding-left: 40px
-        padding-right: 23px
+        // padding-left: 40px
+        // padding-right: 23px
         +mq(lg)
             padding: 0
         +mq(xxl)
@@ -123,10 +128,16 @@
 
             li 
                 position: relative
-                padding: 0 10px
+                padding: 0 25px
                 display: flex
+                +mq(xxl)
+                    padding: 0 20px
+                +mq(xl)
+                    padding: 0 10px
+
                 +mq(lg)
                     margin-bottom: 30px
+                    padding: 0 10px
                 a 
                     color: #fff
                     position: relative
@@ -179,22 +190,23 @@
             padding-left: 0
             justify-content: center
             padding-right: 17%
-        .burger-menu
-            display: none
-            +mq(lg)
-                display: block
-                position: absolute
-                right: 10px
-                top: 0
 
+    .burger-menu
+        display: none
+        +mq(lg)
+            display: block
+            // position: absolute
+            // right: 10px
+            // top: 0
+
+        .burger-menu_close
+            display: none
+        
+        &.active
             .burger-menu_close
+                display: inline-block
+            .burger-menu_open
                 display: none
-            
-            &.active
-                .burger-menu_close
-                    display: inline-block
-                .burger-menu_open
-                    display: none
 
 
     &__phone
@@ -212,6 +224,8 @@
             display: none
         a
             margin: 0 8px
+            +mq(xl)
+                margin: 0 4px
 
             img
                 display: flex
