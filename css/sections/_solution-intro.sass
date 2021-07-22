@@ -37,6 +37,12 @@
             left: 0
         .solution-slider-next
             right: 0
+    &-slide 
+        +mq(lg)
+            img
+                min-height: 275px
+                object-fit: cover
+
 
     &__slider_nav
         position: absolute
@@ -46,17 +52,33 @@
         bottom: 40px
         width: 555px
         z-index: 5
+        +mq(lg)
+            max-width: 365px
+            bottom: 20px
+        +mq(480px)
+            max-width: 270px
 
     &-slide_nav
         padding-bottom: 18px
         margin-right: 20px
         cursor: pointer
+        +mq(lg)
+            margin-right: 10px
+            padding-bottom: 10px
         &.slick-current
             border-bottom: 2px solid #fff
         img 
             width: 124px
             height: 81px
             object-fit: cover
+            +mq(lg)
+                width: 80px
+                height: 55px
+            +mq(480px)
+               height: 45px
+
+
+
 .solution-form
     display: flex
     position: relative
@@ -96,7 +118,7 @@
         font-family: gpb
         font-size: 28px
         line-height: 145%
-        margin-bottom: 1px
+        margin-bottom: 16px
     &__subtitle
         font-size: 15px
         line-height: 145%
@@ -112,12 +134,17 @@
         min-width: 125px
         display: flex
         align-items: center
+        +mq(xxl)
+            padding: 25px 20px
+            min-width: 95px
     &-wrap  
         padding-left: 115px
         padding-top: 30px
         width: 100%
         position: sticky
         top: 130px
+        +mq(xxl)
+            padding-left: 55px
 
 .single-solution
     margin-bottom: 100px
@@ -139,3 +166,50 @@
     &__content 
         font-size: 15px
         line-height: 22px
+
++mq(xxl)
+    .solution-form
+        &__title
+            font-size: 22px
+        &__form
+            padding: 40px
+    .single-solution
+        &__title
+            font-size: 54px
+            line-height: 51px
+   
+           
++mq(lg)
+    .solution-form
+        &-wrap  
+            margin-top: 40px
+            padding-left: 30px
++mq(md)
+    
+    .solution-form
+        &-wrap
+            padding-left: 15px
+            padding-top: 15px
+        &::after
+            top: -15px
+            left: -15px
+        &__title
+            font-size: 16px
+            line-height: 18px
+        &__subtitle
+            font-size: 12px
+        &__form
+            padding: 20px
+
+            &-btn 
+                .btn 
+                    min-width: auto
+        &__label
+            padding: 10px 10px
+            min-width: 60px
+            display: none
+
+    .single-solution
+        &__title
+            font-size: 24px
+            line-height: 21px

@@ -290,7 +290,16 @@ $( document ).ready(function() {
         dots: false,
         autoplaySpeed:5000,
         asNavFor: ".solution-intro-slider",
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            }
+        ]
 
     })
 
@@ -302,5 +311,21 @@ $( document ).ready(function() {
         slidesToScroll: 1,
         dots: false,
         // autoplaySpeed:5000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+            },
+            {
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
     })
 });
