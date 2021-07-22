@@ -1,0 +1,36 @@
+.project-intro
+    margin-bottom: 100px
+    position: relative
+    +mq(md)
+        overflow: hidden
+        margin-bottom: 50px
+    +mq(sm)
+        // margin: 0 -20px 50px -20px
+    .solution-intro__slider
+        margin: 0 -20px 0 -20px
+    .solution-intro-slide
+        img
+            height: 675px
+            object-fit: cover
+            width: 100%
+            +mq(xxxl)
+                height: 625px
+            +mq(1485px)
+                height: 505px
+            +mq(xl)
+                height: 465px
+            +mq(lg)
+                height: 370px
+            +mq(md)
+                height: 320px
+            +mq(sm)
+                height: 255px
+
+    .solution-slider-prev
+        left: 40px
+        +mq(md)
+            left: 20px
+    .solution-slider-next
+        right: 40px
+        +mq(md)
+            right: 20px
