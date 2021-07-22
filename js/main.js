@@ -294,4 +294,13 @@ $( document ).ready(function() {
 
     })
 
+
+    $('.projects__items_slider').slick({
+        prevArrow: $('.projects-slider-prev'),
+        nextArrow: $('.projects-slider-next'),
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        // autoplaySpeed:5000,
+    })
 });
