@@ -55,6 +55,7 @@
         +mq(lg)
             max-width: 365px
             bottom: 20px
+            display: none
         +mq(480px)
             max-width: 270px
 
@@ -135,8 +136,8 @@
         display: flex
         align-items: center
         +mq(xxl)
-            padding: 25px 20px
-            min-width: 95px
+            // padding: 25px 20px
+            // min-width: 95px
     &-wrap  
         padding-left: 115px
         padding-top: 30px
@@ -173,11 +174,24 @@
             font-size: 22px
         &__form
             padding: 40px
+            &-btn 
+                .btn 
+                    min-width: auto
+        &__label
+            padding: 25px 20px
+            min-width: 95px
     .single-solution
         &__title
             font-size: 54px
             line-height: 51px
-   
++mq(xl)
+    .solution-form
+        &__title
+            font-size: 18px
+            line-height: 22px
+        &__label
+                padding: 15px 5px
+                min-width: 70px
            
 +mq(lg)
     .solution-form

@@ -42,12 +42,13 @@
         display: flex
         flex-wrap: wrap
         justify-content: center
-        min-width: 105px
+        // min-width: 105px
         transition: .3s
         // transform: translateY(-20px)
-
+        +mq(xl)
+            max-width: 85px
         +mq(md)
-           min-width: auto
+            min-width: auto
         img 
             +mq(md)
                 min-width: 38px
@@ -74,7 +75,8 @@
             transform: translateY(-22px)
             +mq(xxl)
                 transform: translateY(-20px)
-                
+            +mq(xl)
+                width: 85px
 
             +mq(md)
                 display: none
@@ -105,12 +107,15 @@
                 overflow-x: auto
                 transform: translateX(100%)
                 transition: 1s
+                padding: 0 20px
                 &.active
                     transform: translateX(0%)
 
             +mq(md)
                 min-height: calc( 100vh - 75px )
                 top: 75px
+                padding: 0 10px
+
         ul
             display: flex
             align-items: center
@@ -130,8 +135,8 @@
                 position: relative
                 padding: 0 25px
                 display: flex
-                +mq(xxl)
-                    padding: 0 20px
+                +mq(1485px)
+                    padding: 0 10px
                 +mq(xl)
                     padding: 0 10px
 
@@ -144,6 +149,8 @@
                     white-space: nowrap
                     +mq(xxl)
                         font-size: 14px
+                    +mq(xl)
+                        font-size: 13px
                     +mq(lg)
                         font-size: 18px
                         font-family: gpm
@@ -160,6 +167,8 @@
                         transition: width .3s ease
                         -webkit-transition: width .3s ease
                        
+                        +mq(xl)
+                            bottom: -3px
                     &:hover
                         &::after
                             width: 100%
@@ -218,6 +227,8 @@
             // transform-origin: 20% 4px
         +mq(xxl)
             font-size: 14px
+        +mq(xl)
+            font-size: 13px
     &__soc
         display: flex
         +mq(lg)
@@ -232,6 +243,8 @@
                 justify-content: center
                 opacity: 0.7
                 transition: 0.3s
+                +mq(xl)
+                    max-width: 22px
                 &:hover
                     opacity: 1
     
@@ -262,6 +275,8 @@
             li 
                 margin-left: 10px
                 position: relative
+                +mq(xl)
+                    margin-left: 7px
                 &::after
                     content: ""
                     position: absolute
@@ -273,6 +288,8 @@
                     background: #fff
                     transition: width .3s ease
                     -webkit-transition: width .3s ease
+                    +mq(xl)
+                        bottom: -3px
                 &:hover
                     &::after
                         width: 100%
@@ -293,6 +310,8 @@
                     color: rgba(255, 255, 255, 0.7)
                     +mq(xxl)
                         font-size: 13px
+                    +mq(xl)
+                        font-size: 12px
         &_mob
             padding-bottom: 60px
             display: none

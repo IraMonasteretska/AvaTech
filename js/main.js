@@ -313,7 +313,7 @@ $( document ).ready(function() {
         // autoplaySpeed:5000,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                   slidesToShow: 2,
                   slidesToScroll: 1
