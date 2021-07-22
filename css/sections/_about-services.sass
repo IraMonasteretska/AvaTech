@@ -1,16 +1,19 @@
 .about-services
     padding-bottom: 35px
-
+    +mq(md)
+        padding-bottom: 25px
     .about-service
         margin-bottom: 65px
-        +mq(md)
+        +mq(lg)
             margin-bottom: 40px
+        +mq(md)
+            margin-bottom: 25px
         &__img
             padding-top: 30px
             padding-left: 30px
             position: relative
             +mq(lg)
-                margin-bottom: 20px
+                margin-bottom: 30px
             +mq(md)
                 padding-top: 20px
                 padding-left: 20px
@@ -60,7 +63,7 @@
                 padding-bottom: 20px
                 font-size: 22px
             +mq(md)
-                font-size: 18px
+                font-size: 16px
         &__text 
             p 
                 font-size: 16px
@@ -68,6 +71,8 @@
                 margin-bottom: 25px
                 +mq(xxl)
                     margin-bottom: 15px
+                +mq(md)
+                    font-size: 14px
         &:nth-child(even)
             .row    
                 flex-direction: row-reverse

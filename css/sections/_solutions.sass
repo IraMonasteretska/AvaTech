@@ -26,7 +26,7 @@
     +mq(lg)
         padding-bottom: 75px
     +mq(md)
-        padding-bottom: 60px
+        padding-bottom: 40px
     &__img
         padding-top: 20px
         padding-left: 20px
@@ -70,6 +70,8 @@
         font-family: gpb
         margin-bottom: 10px
         color: #000
+        +mq(md)
+            font-size: 16px
         &:hover
             text-decoration: none
             color: #000
@@ -77,7 +79,8 @@
     &__text
         padding-left: 20px
         margin-bottom: 30px
-
+        +mq(md)
+            font-size: 14px
     &__link
         padding-left: 20px
         color: #000
@@ -94,3 +97,5 @@
             line-height: 15px
             margin-right: 20px
             transition: .3s
+            +mq(md)
+                font-size: 15px

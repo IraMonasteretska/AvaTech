@@ -1,7 +1,6 @@
 .text-block
     margin-bottom: 100px
-    +mq(md)
-        margin-bottom: 50px
+
     &__title
         font-size: 24px
         line-height: 145%
@@ -9,6 +8,7 @@
         padding-bottom: 33px
         margin-bottom: 33px
         position: relative
+        
         &::after
             content: ''
             height: 1px
@@ -46,3 +46,24 @@
             -o-border-radius: 10px
             // border: 2px solid #F3F3F3
             border-right-width: 0
+
++mq(lg)
+    .text-block
+        margin-bottom: 50px
+
+        &__content
+            height: 300px
+    
++mq(md)
+    .text-block
+        margin-bottom: 50px
+
+        &__title
+            font-size: 16px
+            padding-bottom: 20px
+            &::after
+                width: 175px
+
+        &__content
+            height: 300px
+    
