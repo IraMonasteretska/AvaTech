@@ -328,4 +328,35 @@ $( document ).ready(function() {
             }
         ]
     })
+
+    $('.used-products').slick({
+        prevArrow: $('.used-products-prev'),
+        nextArrow: $('.used-products-next'),
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        // arrows: false,
+        dots: false,
+        vertical: true,
+        verticalSwiping: true,
+        
+
+    
+        // autoplaySpeed:5000,
+        // responsive: [
+        //     {
+        //         breakpoint: 992,
+        //         settings: {
+        //           slidesToShow: 2,
+        //           slidesToScroll: 1
+        //         }
+        //     },
+        //     {
+        //       breakpoint: 520,
+        //       settings: {
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1
+        //       }
+        //     }
+        // ]
+    })
 });
