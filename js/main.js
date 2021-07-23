@@ -340,23 +340,22 @@ $( document ).ready(function() {
         verticalSwiping: true,
         
 
-    
-        // autoplaySpeed:5000,
-        // responsive: [
-        //     {
-        //         breakpoint: 992,
-        //         settings: {
-        //           slidesToShow: 2,
-        //           slidesToScroll: 1
-        //         }
-        //     },
-        //     {
-        //       breakpoint: 520,
-        //       settings: {
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1
-        //       }
-        //     }
-        // ]
+        responsive: [
+            // {
+            //     breakpoint: 992,
+            //     settings: {
+            //       slidesToShow: 2,
+            //       slidesToScroll: 1
+            //     }
+            // },
+            {
+                breakpoint: 769,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     })
 });

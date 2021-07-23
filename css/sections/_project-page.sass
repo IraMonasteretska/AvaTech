@@ -45,16 +45,32 @@
         padding-bottom: 45px
         display: flex
         justify-content: space-between
+        +mq(md)
+            flex-direction: column
+            padding-bottom: 20px
+            margin-bottom: 45px
     &__title 
         h1 
             font-family: gpb
             font-size: 64px
             line-height: 78px
             margin-bottom: 14px
+            +mq(md)
+                font-size: 24px
+                line-height: 35px
+                margin-bottom: 9px
     &__subtitle
         font-family: gpm 
+        +mq(md)
+            font-size: 14px
+            margin-bottom: 15px
     &__address
         text-align: right
+        +mq(md)
+            text-align: left
+            font-size: 14px
+            br 
+                display: none
     &__desc
         display: flex
         flex-wrap: wrap
@@ -67,6 +83,15 @@
             position: relative
             min-height: 190px
             padding-top: 10px
+            +mq(xxl)
+                padding: 0 15px
+            +mq(md)
+                padding: 0
+                margin-bottom: 25px
+            +mq(sm)
+                width: 100%
+
+
             &::after
                 content: counter(index)
                 font-size: 260px
@@ -77,6 +102,10 @@
                 top: 0
                 left: -12px
                 z-index: -1
+                +mq(md)
+                    left: auto
+                    right: 0
+                    
 
             &__title
                 font-family: gpm
@@ -84,6 +113,9 @@
                 padding-bottom: 11px
                 position: relative
                 margin-bottom: 12px
+                +mq(xxl)
+                    font-size: 18px
+
                 &::after
                     content: ''
                     height: 1px
@@ -108,8 +140,12 @@
         width: 66%
         text-align: right
         padding: 0 20px
+        +mq(xl)
+            display: none
     &__slider
         width: 33%
+        +mq(xl)
+            width: 100%
         &-wrap
             position: relative
         .slick-arrow
@@ -162,8 +198,13 @@
                 font-size: 14px
                 line-height: 145%
                 margin-bottom: 8px
+                padding: 6px
+                transition: 0.2s
             &:hover
                 text-decoration: none
+                .used-product__name
+                    background: #000
+                    color: #fff
 
 
 .cons
@@ -171,10 +212,21 @@
     padding: 72px 0 72px 80px
     position: relative
     overflow: hidden
+    +mq(xl)
+        padding: 72px 0 72px 40px
+    +mq(lg)
+        padding: 250px 40px 72px 40px
+    +mq(md)
+        padding: 250px 0px 60px 0px
+        margin-right: -20px
+    .row
+        +mq(md)
+            width: 100%
     &__wrapper
         margin-bottom: 100px
         +mq(md)
             margin-bottom: 50px
+            background: #000
     .col-lg-5
         position: static
 
@@ -187,9 +239,10 @@
         z-index: 2
         max-width: 475px
         margin-bottom: 6px
-        +mq(md)
+        +mq(lg)
             font-size: 18px
             text-align: center
+            max-width: 100%
         span 
             font-family: gpb
     &__form
@@ -199,15 +252,17 @@
             display: flex
             justify-content: space-between
             align-items: flex-end
-            +mq(md)
+            +mq(lg)
                 flex-wrap: wrap
         &-inputs
             display: flex
             flex-direction: column
             width: calc( 50% - 10px )
             padding-right: 30px
-            +mq(md)
+            +mq(lg)
                 width: 100%
+                padding-right: 0
+                margin-bottom: 60px
 
             input
                 padding: 10px
@@ -225,9 +280,10 @@
             margin-bottom: 25px
             position: relative
             padding-left: 10px
-            +mq(md)
+            +mq(lg)
                 width: 100%
                 justify-content: center
+                padding-left: 0
 
             .btn 
                 width: 100%
@@ -240,7 +296,14 @@
         +mq(1485px)
             right: -100px
         +mq(xl)
-            top: -40px
+            top: -60px
+            right: -160px
+        +mq(lg)
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            text-align: center
+
         img 
             width: 100%
             +mq(lg)
