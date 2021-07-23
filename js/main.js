@@ -358,4 +358,49 @@ $( document ).ready(function() {
             }
         ]
     })
+    if (document.querySelector(".product-slider-for")) {
+        // product-slider
+        $(".product-slider-for").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: ".product-slider-nav",
+        });
+        $(".product-slider-nav").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: ".product-slider-for",
+            dots: false,
+            // arrows: false,
+            focusOnSelect: true,
+            vertical: true,
+            verticalSwiping: true,
+            prevArrow: `<div class='product-slider_prev'>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.0098 11.2982L11.9994 5.28778L5.98895 11.2982L7.40316 12.7124L11.9994 8.11621L16.5956 12.7124L18.0098 11.2982Z" fill="white"/>
+                            </svg>
+                        </div>`,
+            nextArrow: `<div class='product-slider_next'>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.99023 9.70181L12.0006 15.7122L18.011 9.70181L16.5968 8.2876L12.0006 12.8838L7.40445 8.2876L5.99023 9.70181Z" fill="white"/>
+                            </svg>
+                        </div>`,
+            responsive: [
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 4,
+                    },
+                },
+                {
+                    breakpoint: 420,
+                    settings: {
+                        slidesToShow: 3,
+                    },
+                },
+            ],
+        });
+    }
+      // end product-slider
 });

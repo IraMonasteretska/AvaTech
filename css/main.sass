@@ -17,6 +17,7 @@
 @import 'sections/text-block'
 @import 'sections/solution-intro'
 @import 'sections/project-page'
+@import 'sections/single-product'
 
 
     
@@ -128,6 +129,9 @@ img
     box-sizing: border-box
     transition: 0.3s
     min-width: 230px 
+    &:focus
+        outline: none
+        box-shadow: none
     +mq(xxl)
         font-size: 15px
         padding: 15px
@@ -144,6 +148,8 @@ img
     &_white
         background: #fff
         color: #000
+    &_bord
+        border: 1px solid #000
     &_white_b
         position: relative
         &::after

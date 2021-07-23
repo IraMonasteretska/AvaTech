@@ -14,7 +14,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApj8qSzyO4DqXeQtFQPKI4mi6p-MBwlpo&libraries=places"></script>
     <title>AvaTech</title>
 </head>
-<body class="products-page">
+<body class="">
     <header class="header__wrapper">
         <div class="header">
             <div class="container">
@@ -114,236 +114,240 @@
         </div>
     </header>
     <main>
-        <section class="about-intro">
-            <div class="about-intro__slider">
-                <div class="about-intro-slider">
-                    <div class="about-intro-slide">
-                        <img src="./img/prod-slide_1.jpg" alt="">
-                    </div>
-                    <div class="about-intro-slide">
-                        <img src="./img/prod-slide_1.jpg" alt="">
-                    </div>
+  
+        <div class="breadcrumbs-wrapper">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <span>
+                        <a href="index.html">Главная</a>
+                    </span>
+                    —
+                    <span>
+                        <a href="index.html">Продукты</a>
+                    </span>
+                    —
+                    <span>
+                        MOLO
+                    </span>
                 </div>
-            </div>
-            <div class="about-intro__container">
-                <div class="container">
-                    <div class="about-intro__title">
-                        <h1>Продукты</h1>
-                        <div class="about-intro__subtitle">
-                            Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit
-                        </div>
-                    </div>
-                    <div class="slick-navigation"></div>
-                </div>
-            </div>
-        </section>
-
-        <div class="container">
-            <div class="breadcrumbs">
-                <span>
-                    <a href="index.html">Главная</a>
-                </span>
-                —
-                <span>
-                    Продукты
-                </span>
             </div>
         </div>
+        
 
-        <section class="products">
+        <!-- <section class="product-menu" >
             <div class="container">
+                <div class="product-menu__list">
+                    <a href="#main-info" class="product-menu-item scroll-section active">
+                        <img src="./img/icon/info.svg" alt="">
+                        <span>main info</span>
+                    </a>
+                    <a href="#product-description" class="product-menu-item scroll-section">
+                        <img src="./img/icon/menu.svg" alt="">
+                        <span>PRODUCT DESCRIPTION</span>
+                    </a>
+                    <a href="#video" class="product-menu-item scroll-section">
+                        <img src="./img/icon/play.svg" alt="">
+                        <span>Video</span>
+                    </a>
+                    <a href="#reviews" class="product-menu-item scroll-section">
+                        <img src="./img/icon/comm.svg" alt="">
+                        <span>Customer Reviews</span>
+                    </a>
+                    <div class="product-menu__share">
+                        <a href="#">
+                            <img src="./img/share.svg" alt="">
+                        </a>
+                    </div>
+                </div>
                 
-                <div class="products__filter">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <select class="nice__select" name="" id="">
-                                <option value="">Область приминения</option>
-                                <option value="">Область приминения</option>
-                                <option value="">Область приминения</option>
-                                <option value="">Область приминения</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <select class="nice__select" name="" id="">
-                                <option value="">Тип</option>
-                                <option value="">Тип</option>
-                                <option value="">Тип</option>
-                                <option value="">Тип</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__items">
-                    <div class="row">
-                        <div class="col-lg-3 col-6">
-                            <a href="single-product.html" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct1.png" alt="">
-                                </div>
-                                <div class="product__name">Jazz</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="single-product.html" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct2.png" alt="">
-                                </div>
-                                <div class="product__name">Komo</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="single-product.html" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct3.png" alt="">
-                                </div>
-                                <div class="product__name">Cube</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="single-product.html" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct4.png" alt="">
-                                </div>
-                                <div class="product__name">Duo</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="#" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct3.png" alt="">
-                                </div>
-                                <div class="product__name">Jazz</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="#" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct1.png" alt="">
-                                </div>
-                                <div class="product__name">Komo</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="#" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct2.png" alt="">
-                                </div>
-                                <div class="product__name">Cube</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="#" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct1.png" alt="">
-                                </div>
-                                <div class="product__name">Duo</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="#" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct4.png" alt="">
-                                </div>
-                                <div class="product__name">Jazz</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="#" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct3.png" alt="">
-                                </div>
-                                <div class="product__name">Komo</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="#" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct1.png" alt="">
-                                </div>
-                                <div class="product__name">Cube</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <a href="#" class="product">
-                                <div class="product__img">
-                                    <img src="./img/roduct2.png" alt="">
-                                </div>
-                                <div class="product__name">Duo</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-               
             </div>
-        </section>
+        </section> -->
 
-        <section class="text-block">
+        <section class="single-product" id="main-info">
             <div class="container">
-                <div class="text-block__title">LOREM IPSUM DOLOR SIT AMET</div>
-                <div class="text-block__content">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but also the leap into 
-                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                        and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but also the leap into 
-                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                        and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but also the leap into 
-                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                        and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but also the leap into 
-                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                        and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but also the leap into 
-                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                        and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but also the leap into 
-                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                        and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.
-                    </p>
+                <div class="product__wrapper">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="product__slider">
+                                <div class="product-slider-nav">
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct3.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct4.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-slider-for">
+                                    <div class="slider-for-item">
+                                        <img src="./img/roduct1.png" alt="">
+                                    </div>
+                                    <div class="slider-for-item">
+                                        <img src="./img/roduct2.png" alt="">
+                                    </div>
+                                    <div class="slider-for-item">
+                                        <img src="./img/roduct3.png" alt="">
+                                    </div>
+                                    <div class="slider-for-item">
+                                        <img src="./img/roduct4.png" alt="">
+                                    </div>
+                                    <div class="slider-for-item">
+                                        <img src="./img/roduct1.png" alt="">
+                                    </div>
+                                    <div class="slider-for-item">
+                                        <img src="./img/roduct2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="product__summary">
+                                <div class="product__title">MOLO</div>
+                                <div class="product__attributes">
+                                   <div class="product-atr">
+                                       <div class="product-atr__name">Тип</div>
+                                       <div class="product-atr__list">
+                                            <ul>
+                                                <li>Встроенные</li>
+                                            </ul>
+                                       </div>
+                                   </div>
+                                   <div class="product-atr">
+                                        <div class="product-atr__name">Категория</div>
+                                        <div class="product-atr__list">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Food зона</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Style зона</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Work зона</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-atr">
+                                        <div class="product-atr__name">Цвет</div>
+                                        <div class="product-atr__list">
+                                             <ul>
+                                                 <li>Под заказ</li>
+                                             </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__desc-text">
+                                    <p>
+                                        “Еще больше угол раскрытия светового потока при универсальной области 
+                                        применения. Универсальность данного светильника не просто слова, он 
+                                        позволяет создать общее либо акцентное освещение в зависимости от
+                                        ваших задач. Jazz XL поможет равномерно залить комнату мягким 
+                                        рассеянным светом либо сделает акцент на нужном вам товаре. Дизайн 
+                                        светильника идеально подойдет для любого помещения, не отвлекая на 
+                                        себя внимания покупателя.” Встраиваемый светильник для общего освещения Jazz XL.  
+                                    </p>
+                                </div>
+                                <div class="product__btn">
+                                    <a href="#" class="btn btn_black btn_bord">Узнать больше</a>
+                                    <a href="#" class="btn btn_white btn_bord">Перейти к проектам</a>
+                                    
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        
+        <!-- <section class="product-description" id="product-description">
+            <div class="container-fluid">
+                <div class="description__wrapper">
+                    <div class="description__head">
+                        <div class="description__head-name">
+                            <img src="./img/icon/menu.svg" alt="">
+                            <span>PRODUCT DESCRIPTION</span>
+                        </div>
+                        <div class="description__head-desc">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </div>
+                    <div class="description__title">
+                        Here may be an idea that was the basis for creating your product or <span>Your main statement.</span> 
+                    </div>
+                    <div class="row ">
+                        <div class="col-lg-6">
+                            <div class="description__text">
+                                <p>
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p> 
+                                <h2>Portable</h2>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                <p>
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute 
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                    Excepteur sint occaecat cupidatat non.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="./img/description.jpg" alt="">
+                        </div>
+                        <div class="col-12 description__text-bottom">
+                            <div class="description__text">
+                                <p>
+                                    Nec feugiat in fermentum posuere urna nec. Consequat interdum varius sit amet. 
+                                    In hac habitasse platea dictumst quisque sagittis purus. Semper risus in hendrerit gravida rutrum. Nec feugiat in fermentum posuere urna nec. Consequat interdum varius sit amet. 
+                                    In hac habitasse platea dictumst quisque sagittis purus. Semper risus in hendrerit gravida rutrum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description__images">
+                        <div class="description-image">
+                            <img src="./img/description-img.jpg" alt="">
+                            <p>Picture description</p>
+                        </div>
+                        <div class="description-image">
+                            <img src="./img/description-img.jpg" alt="">
+                            <p>Picture description</p>
+                        </div>
+                        <div class="description-image">
+                            <img src="./img/description-img.jpg" alt="">
+                            <p>Picture description</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section> -->
         
      
     </main>
@@ -554,7 +558,7 @@
             </div>
         </div>
     </footer>
-    
+   
 </body>
 <script src='./js/jquery.js'></script>
 <script src='./js/bootstrap.min.js'></script>

@@ -1,0 +1,95 @@
+.product
+    &__slider
+        display: flex
+        margin-bottom: 100px
+
+        .product-slider-nav
+            width: 105px
+            min-width: 105px
+            margin-right: 20px
+
+            .slider-nav-item
+                margin: 5px 0
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 104px
+                height: 104px
+               
+                &.slick-current
+                    border: 1px solid #e0e0e0
+
+            .slick-arrow
+                background: #000
+                display: flex
+                align-items: center
+                justify-content: center
+                cursor: pointer
+                height: 30px
+                
+            .product-slider_prev
+                margin-bottom: 15px
+            .product-slider_next
+                margin-top: 15px
+
+        .product-slider-for
+            width: calc( 100% - 125px )
+            border: 1px solid #e0e0e0
+            .slick-list,
+            .slick-track
+                height: 100%
+
+            .slider-for-item
+                display: flex
+                align-items: center
+                justify-content: center
+                // height: 100%
+
+    &__summary
+        padding-left: 40px
+    
+    &__title
+        font-family: gpb
+        font-size: 48px    
+        padding-bottom: 24px
+        border-bottom: 1px solid #e0e0e0
+        margin-bottom: 48px
+    &__attributes
+        margin-bottom: 45px
+        .product-atr
+            display: flex
+            margin-bottom: 18px
+
+            &__name 
+                min-width: 135px
+                color: #222222
+                font-size: 15px
+            &__list 
+                ul 
+                    display: flex
+                    list-style: none
+                    margin: 0
+                    padding: 0
+                    padding-left: 15px
+
+                    li 
+                        color: #222222
+                        font-size: 15px
+                        font-family: gpm
+                        margin-right: 24px
+
+                        a 
+                            color: #222222
+                            font-size: 15px
+                            font-family: gpm
+                            text-decoration: underline
+    
+    &__desc-text
+        margin-bottom: 48px
+
+    &__btn
+        display: flex
+        justify-content: space-between
+        .btn
+            width: calc( 50% - 10px )
+            min-width: auto
