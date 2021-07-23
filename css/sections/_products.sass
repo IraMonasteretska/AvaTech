@@ -28,14 +28,20 @@
     // border: 1px solid #000000
     margin-bottom: 20px
     display: block
+    background: #fff
 
     &__img 
         text-align: center
         img
             object-fit: cover
             height: 185px
+            +mq(xxl)
+                height: 120px
+           
             +mq(md)
                 height: 110px
+            +mq(sm)
+                height: 90px
 
     &__name 
         font-size: 22px
@@ -46,6 +52,11 @@
         background: #fff
         padding: 15px 0
         transition: 0.3s
+        +mq(xxl)
+            font-size: 20px
+        +mq(xl)
+            font-size: 18px
+            padding: 10px 0
         +mq(md)
             font-size: 14px
     
@@ -65,6 +76,7 @@
     line-height: 55px
     height: 55px
     float: none
+    background: #ffffff00
     +mq(lg)
         margin-bottom: 10px
     &::after
