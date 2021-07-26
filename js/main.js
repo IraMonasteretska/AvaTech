@@ -329,6 +329,35 @@ $( document ).ready(function() {
         ]
     })
 
+    
+    $('.related-products__slider').slick({
+        prevArrow: $('.related-slider-prev'),
+        nextArrow: $('.related-slider-next'),
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // arrows: false,
+        dots: false,
+        
+
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    })
+
     $('.used-products').slick({
         prevArrow: $('.used-products-prev'),
         nextArrow: $('.used-products-next'),
