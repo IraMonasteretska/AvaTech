@@ -3774,6 +3774,7 @@ textarea {
   background: #fff;
   margin-bottom: 25px;
   cursor: pointer;
+  height: 30px;
 }
 
 .about-intro__container .slick-navigation .slick-dots li.slick-active {
@@ -5757,6 +5758,12 @@ textarea {
   }
 }
 
+@media (max-width: 370px) {
+  .product-menu__list .product-menu-item {
+    font-size: 12px;
+  }
+}
+
 .product-menu__list .product-menu-item:hover {
   border-bottom: 3px solid rgba(51, 51, 51, 0.2);
 }
@@ -5769,6 +5776,12 @@ textarea {
   font-size: 18px;
   font-family: gpm;
   margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .desc-title {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -5792,12 +5805,22 @@ textarea {
 
 @media (max-width: 767px) {
   .application__list {
-    display: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
 .application__list-item {
   opacity: 0.1;
+}
+
+@media (max-width: 767px) {
+  .application__list-item {
+    padding: 5px;
+    width: 25%;
+  }
 }
 
 .application__list-item.active {
@@ -5898,6 +5921,13 @@ textarea {
   border-top: 4px solid #e0e0e0;
 }
 
+@media (max-width: 767px) {
+  .single-product-projects-title {
+    padding-top: 50px;
+    margin-bottom: 40px;
+  }
+}
+
 .related-products {
   margin-bottom: 100px;
 }
@@ -5928,7 +5958,14 @@ textarea {
 }
 
 .single-product__share .share__list-btn {
+  display: none;
   height: 30px;
+}
+
+@media (max-width: 767px) {
+  .single-product__share .share__list-btn {
+    display: block;
+  }
 }
 
 .single-product__share .share__list {
@@ -5959,6 +5996,9 @@ textarea {
 
 .single-product__share .share__list-item {
   padding: 0 13px;
+  opacity: 0.2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 767px) {
@@ -5968,6 +6008,10 @@ textarea {
     height: 20px;
     margin-bottom: 5px;
   }
+}
+
+.single-product__share .share__list-item:hover {
+  opacity: 1;
 }
 
 @font-face {
