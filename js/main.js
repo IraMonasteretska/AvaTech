@@ -402,5 +402,18 @@ $( document ).ready(function() {
             ],
         });
     }
-      // end product-slider
+    // end product-slider
+
+    // scroll to section
+    if (document.querySelector(".scroll-section")) {
+        $(".scroll-section").on("click", function (event) {
+        event.preventDefault();
+            $(".scroll-section").removeClass("active");
+            $(this).addClass("active");
+            var id = $(this).attr("href"),
+                top = $(id).offset().top - 200;
+            $("body,html").animate({ scrollTop: top }, 1000);
+        });
+    }
+
 });

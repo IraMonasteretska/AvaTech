@@ -93,3 +93,107 @@
         .btn
             width: calc( 50% - 10px )
             min-width: auto
+
+.product-menu
+    margin-bottom: 72px
+    position: sticky
+    top: 99px
+    background: #ffffff
+    z-index: 2
+ 
+    &__list
+        border-bottom: 1px solid #E0E0E0
+        
+        display: flex
+        justify-content: space-between
+
+        .product-menu-item
+            font-family: gpb 
+            font-size: 16px
+            color: #000000
+            padding-bottom: 24px
+            padding-top: 36px
+            text-decoration: none
+            border-bottom: 3px solid rgba(51, 51, 51, 0)
+            transition: .2s
+            &:hover
+                border-bottom: 3px solid rgba(51, 51, 51, 0.2)
+                
+            &.active
+                border-bottom: 3px solid #333333
+
+.desc-title
+    font-size: 18px
+    font-family: gpm
+    margin-bottom: 30px
+
+.application
+
+    &__list 
+        padding: 50px 0
+        display: flex
+        justify-content: space-between
+
+        &-item
+            opacity: 0.1
+
+            &.active
+                opacity: 1 
+    &__text
+        margin-bottom: 50px
+        color: #222222
+
+        
+.product-description
+    .description-item
+        &-row
+            margin-bottom: 50px
+        &__list
+            max-width: 50%
+
+            ul 
+                padding: 0
+                margin: 0
+                li
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                    align-items: baseline
+                    color: #222222
+                    padding: 7px 0
+        &__val
+            flex: 1 1 auto
+            min-width: 50%
+            max-width: 50%
+            &::before
+               
+        &__mid
+            flex: auto
+            margin: 0 10px
+            border-bottom: 1px solid #e0e0e0
+
+        &__downloads
+            p 
+                font-family: gpm
+                font-size: 15px
+                margin-bottom: 18px
+            
+            a 
+                color: #000
+                text-decoration: none
+                display: flex
+                align-items: center
+                svg 
+                    margin-right: 14px
+
+
+.single-product-projects-title
+    margin-bottom: 50px
+    padding-top: 70px
+    border-top: 4px solid #e0e0e0
+
+.related-products
+    margin-bottom: 100px
+    
+    &-title
+        margin-bottom: 50px
