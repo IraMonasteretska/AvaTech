@@ -1,9 +1,11 @@
 
 				
 $( document ).ready(function() {
-    console.log( "ready!" );
-    var player = document.querySelector('.about__video');
 
+    console.log( "ready!" );
+
+    // Video player
+    var player = document.querySelector('.about__video');
     var video = document.querySelector('#about_video');
     var playBtn = document.querySelector('.about__video-play');
     // var fullscreenBtn =document.querySelector('.fullscreen'); 
@@ -50,6 +52,8 @@ $( document ).ready(function() {
         video.addEventListener('click', togglePlay);
     // fullscreenBtn.addEventListener('click', toggleFullscreen);
     }
+
+    //  Video player end ////////////////////
     
 
     
@@ -100,20 +104,27 @@ $( document ).ready(function() {
 
     $('.nice__select').niceSelect()
 
+
+    // contacts select footer
     $('#contacts_select').on('change', function () {
         let active = $(this).val();
         $('.footer__contact-list').removeClass('active')
         $('.footer__contact-list[data-list="'+ active +'"]').addClass('active')
         console.log(active);
     })
+    /////////////////
 
+    // contacts select modal
     $('#contacts_select_modal').on('change', function () {
         let active = $(this).val();
-        $('.modal__contact-list').removeClass('active')
-        $('.modal__contact-list[data-list="'+ active +'"]').addClass('active')
+        $('.modal__image').removeClass('active')
+        $('.modal__image[data-list="'+ active +'"]').addClass('active')
         console.log(active);
     })
-
+    /////////////////
+    
+    // About counter //
+    //////////////////////////////
     var aboutStatistics = $('.about__statistics')
     function counter () {
         var statisticsCount = 0;
@@ -148,6 +159,8 @@ $( document ).ready(function() {
     if (aboutStatistics.length) {
         counter()
     }
+    /// About counter end  ///////////////////////////
+
 
     // aos animation
     AOS.init({
@@ -204,27 +217,7 @@ $( document ).ready(function() {
         nextArrow: $('.slick-rev-next'),
         asNavFor: ".intro-bg-slider",
     })
-    // function resizeSwiper() {
-    //     $('.swiper-container').height($('.block-accessories__text').height())
-    // }
-    // var swiper = new Swiper(".reviews-slider", {
-    //     slidesPerView: 1,
-    //     // autoHeight: true,
-       
-    //     // calculateHeight:true,
-       
-    //     // spaceBetween: 30,
-    //     loop: true,
-    //     // autoplay: true,
-    //     // pagination: {
-    //     //     el: ".swiper-pagination",
-    //     //     clickable: true,
-    //     // },
-    //     // navigation: {
-    //     //     nextEl: ".swiper-button-next",
-    //     //     prevEl: ".swiper-button-prev",
-    //     // },
-    // });
+
 
 
     $('.block-accessories__more .expand').on('click',function(e){
@@ -275,7 +268,7 @@ $( document ).ready(function() {
 
     $('.about-intro-slider').slick({
         arrows: false,
-        fade: true,
+        // fade: true,
         dots: true,
         appendDots:$(".slick-navigation"),
         autoplay:true,

@@ -3915,16 +3915,15 @@ textarea {
 }
 
 .about-intro__container .slick-navigation .slick-dots li {
-  width: 3px;
-  height: 40px;
+  width: 1px;
+  height: 30px;
   background: #fff;
   margin-bottom: 25px;
   cursor: pointer;
-  height: 30px;
 }
 
 .about-intro__container .slick-navigation .slick-dots li.slick-active {
-  width: 8px;
+  width: 2px;
 }
 
 .about-intro__title {
@@ -6360,6 +6359,15 @@ textarea {
   text-align: center;
   color: #fff;
   margin-bottom: 21px;
+}
+
+.modal__image {
+  text-align: center;
+  display: none;
+}
+
+.modal__image.active {
+  display: block;
 }
 
 @media (max-width: 991px) {
