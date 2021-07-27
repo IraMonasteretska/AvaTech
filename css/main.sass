@@ -20,6 +20,7 @@
 @import 'sections/solution-intro'
 @import 'sections/project-page'
 @import 'sections/single-product'
+@import 'sections/404'
 
 
     
@@ -167,5 +168,23 @@ img
 
         &:hover
             transform: translate(10px, 10px)
+            &::after
+                transform: translate(-10px, -10px)
+
+    &_black_b
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            top: 0
+            border: 1px solid #000000
+            transition: 0.3s
+        &:hover
+            transform: translate(10px, 10px)
+            background: #000
+            color: #fff
             &::after
                 transform: translate(-10px, -10px)
