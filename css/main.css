@@ -4900,6 +4900,12 @@ textarea {
   }
 }
 
+@media (max-width: 576px) {
+  .project-intro .solution-intro__slider {
+    margin: 0 -20px 0 -20px;
+  }
+}
+
 .project-intro .solution-intro-slide img {
   height: 675px;
   -o-object-fit: cover;
