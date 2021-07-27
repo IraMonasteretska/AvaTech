@@ -107,6 +107,13 @@ $( document ).ready(function() {
         console.log(active);
     })
 
+    $('#contacts_select_modal').on('change', function () {
+        let active = $(this).val();
+        $('.modal__contact-list').removeClass('active')
+        $('.modal__contact-list[data-list="'+ active +'"]').addClass('active')
+        console.log(active);
+    })
+
     var aboutStatistics = $('.about__statistics')
     function counter () {
         var statisticsCount = 0;
