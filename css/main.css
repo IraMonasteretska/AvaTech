@@ -2100,6 +2100,7 @@ textarea {
 .header__phone {
   color: #fff;
   font-family: gpb;
+  cursor: pointer;
 }
 
 .header__phone img {
