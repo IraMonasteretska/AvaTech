@@ -77,7 +77,15 @@
         color: #fff
         position: relative
         z-index: 2
+
+        +mq(xxxl)
+            font-size: 60px
+        +mq(xxl)
+            font-size: 50px
+        +mq(lg)
+            font-size: 36px
         +mq(md)
+            font-size: 48px
             margin-bottom: 23px
             padding: 0 10px
         span 
@@ -94,14 +102,7 @@
                 // background: rgba(0, 0, 0, 0.7)
                 // z-index: 1
 
-        +mq(xxxl)
-            font-size: 60px
-        +mq(xxl)
-            font-size: 50px
-        +mq(lg)
-            font-size: 40px
-        +mq(md)
-            font-size: 48px
+        
     &__subtitle
         font-size: 18px
         line-height: 17px
@@ -137,6 +138,8 @@
         .container
             height: 100%
             position: relative
+            +mq(lg)
+                max-width: 90%
         .col-lg-8
             position: static
 
@@ -152,12 +155,18 @@
         flex: 0 0 36%
         max-width: 36%
         background: #000
+        +mq(lg)
+            flex: 0 0 40%
+            max-width: 40%
         +mq(md)
             display: none
 
     .intro-bg-slider
         flex: 0 0 64%
         max-width: 64%
+        +mq(lg)
+            flex: 0 0 60%
+            max-width: 60%
         +mq(md)
             flex: 0 0 100%
             max-width: 100%
@@ -250,6 +259,9 @@
             width: 450px
         +mq(lg)
             width: 380px
+        +mq(890px)
+            width: 310px
+
         +mq(md)
             position: relative
             top: 0

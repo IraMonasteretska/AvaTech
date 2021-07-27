@@ -36,12 +36,19 @@
                     font-size: 15px
     &__contacts
         display: flex
+        +mq(xl)
+            flex-direction: column
+            padding: 0 40px 0 20px
+            
         +mq(lg)
             display: none
 
         .contact-list
             border-bottom: 1px solid rgba(255, 255, 255, 0.2)
             margin-bottom: 30px
+            &:last-child
+                border: none
+                margin-bottom: 0
             &__title
                 font-size: 18px
                 line-height: 17px
@@ -61,13 +68,23 @@
 
     &__select
         width: 40%
+        +mq(xl)
+            width: 100%
+            margin-bottom: 20px
+           
 
         .nice__select 
             border-color: #fff
             background: #000
             color: #fff
+            +mq(xl)
+                height: 47px
+                line-height: 47px
+                font-size: 14px
             &::after
                 border-color: #fff
+                +mq(xl)
+                    top: 17px
             
             .list
                 background: #000
@@ -86,6 +103,9 @@
         height: 400px
         overflow-y: scroll
         display: none
+        +mq(xl)
+            width: 100%
+            padding-left: 18px
 
         &.active
             display: block
@@ -137,7 +157,7 @@
     &__copy
         margin-top: 60px
         padding: 42px 0
-        border-top: 1px solid rgba(255, 255, 255, 0.5)
+        border-top: 1px solid rgba(255, 255, 255, 0.25)
         +mq(md)
             margin-top: 50px
             border: none

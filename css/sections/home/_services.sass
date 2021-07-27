@@ -117,6 +117,8 @@
             margin-bottom: 38px
             position: relative
             padding-left: 62px
+            +mq(xl)
+                font-size: 20px
             +mq(lg)
                 font-size: 18px
                 margin: 30px 0
@@ -139,6 +141,9 @@
             +mq(1024px)
                 max-width: 345px
                 min-width: 345px
+            +mq(xl)
+                max-width: 300px
+                min-width: 300px
             +mq(lg)
                 max-width: none
                 min-width: auto
@@ -153,7 +158,7 @@
             background-image: url(../img/servbg.png)
             background-repeat: no-repeat
             background-position: center center
-            +mq(xxl)
+            +mq(1505px)
                 justify-content: flex-start
                 padding-left: 15px
             +mq(lg)
@@ -162,9 +167,11 @@
                 padding: 0
 
             img
-                +mq(xxl)
-                    min-width: 549px
-                    min-height: 530px
+                +mq(1505px)
+                    // min-width: 549px
+                    // min-height: 530px
+                    min-width: 490px
+                    min-height: 440px
                 +mq(xl)
                     min-width: 449px
                     min-height: 430px
@@ -177,7 +184,7 @@
            
         &-text
             padding-right: 100px
-            +mq(xxl)
+            +mq(1505px)
                 padding-right: 50px
             +mq(lg)
                 padding-right: 0
