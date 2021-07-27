@@ -10,28 +10,40 @@
         position: relative
         padding-top: 70px
         height: 40px
+        +mq(lg)
+            padding-top: 0
     &__fullscreen
         padding-top: 99px
         padding-right: 0 !important
+        +mq(xxl)
+            padding-top: 82px
+        +mq(md)
+            padding-top: 75px
     .modal-dialog 
         width: 100%
         max-width: none
-        height: 100%
+        min-height: 100%
         margin: 0
+        background: #000
+
     .modal-content 
-        height: 100%
+        min-height: 100%
         border-radius: 0
         background: #000
     
     &__body
-        padding: 75px 0 
-        
+        padding: 75px 0 50px 0 
+        +mq(lg)
+            padding-top: 15px
         
     &__form
         display: flex
         flex-direction: column
         &-wrap
             max-width: 375px
+            +mq(lg)
+                margin: 0 auto 60px auto
+
 
         textarea 
             height: 45px
@@ -52,15 +64,18 @@
         display: none
         &.active
             display: block
+        +mq(lg)
+            display: none !important
 
     &__contacts
-        // display: flex
-        // +mq(xl)
-        //     flex-direction: column
-        //     padding: 0 40px 0 20px
+        padding-left: 40px
             
+        +mq(xl)
+            padding-left: 10px
         +mq(lg)
-            display: none
+            max-width: 375px
+            margin: 0 auto 60px auto
+            padding-left: 0
 
         .contact-list
             border-bottom: 1px solid rgba(255, 255, 255, 0.2)
@@ -127,6 +142,8 @@
         +mq(xl)
             width: 100%
             padding-left: 18px
+        +mq(lg)
+            padding-left: 0
 
         &.active
             display: block
