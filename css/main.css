@@ -6303,6 +6303,7 @@ textarea {
 }
 
 .er-404__video {
+  text-align: center;
   margin-bottom: 40px;
 }
 
@@ -6311,6 +6312,10 @@ textarea {
     margin-left: -20px;
     margin-right: -20px;
   }
+}
+
+.er-404__video video {
+  max-height: 500px;
 }
 
 .er-404__img {
@@ -6435,11 +6440,23 @@ textarea {
   color: #fff;
 }
 
+@media (max-width: 767px) {
+  .modal__title {
+    font-size: 24px;
+  }
+}
+
 .modal__subtitle {
   font-size: 16px;
   text-align: center;
   color: #fff;
   margin-bottom: 21px;
+}
+
+@media (max-width: 767px) {
+  .modal__subtitle {
+    font-size: 14px;
+  }
 }
 
 .modal__btn {
@@ -6643,7 +6660,7 @@ body.home .header__wrapper {
 }
 
 body.products-page {
-  background: #F2F2F2;
+  background: #FCFCFC;
 }
 
 main {
