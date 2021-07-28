@@ -6423,6 +6423,11 @@ textarea {
   margin-bottom: 21px;
 }
 
+.modal__btn {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .modal__image {
   text-align: center;
   display: none;
