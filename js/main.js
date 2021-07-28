@@ -117,7 +117,9 @@ $( document ).ready(function() {
     // contacts select modal
     $('#contacts_select_modal').on('change', function () {
         let active = $(this).val();
+        $('.modal__contact-list').removeClass('active')
         $('.modal__image').removeClass('active')
+        $('.modal__contact-list[data-list="'+ active +'"]').addClass('active')
         $('.modal__image[data-list="'+ active +'"]').addClass('active')
         console.log(active);
     })
