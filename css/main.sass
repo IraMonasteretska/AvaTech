@@ -8,6 +8,8 @@
 @import 'sections/home/intro'
 @import 'sections/home/about'
 @import 'sections/home/projects'
+@import 'sections/home/products'
+@import 'sections/home/contacts'
 
 // about page
 @import 'sections/about/about-intro'
@@ -15,8 +17,6 @@
 
 
 @import 'sections/header'
-@import 'sections/products'
-@import 'sections/contacts'
 @import 'sections/footer'
 @import 'sections/solutions'
 @import 'sections/text-block'
@@ -202,3 +202,7 @@ img
     bottom: 0
     display: flex
     align-items: center
+    +mq(xxl)
+        top: 82px
+    +mq(lg)
+        top: 75px
