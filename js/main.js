@@ -47,7 +47,7 @@ $( document ).ready(function() {
         fullscreen = !fullscreen;
     }
 
-    if (player) {
+    if (playBtn) {
         playBtn.addEventListener('click', togglePlay);
         video.addEventListener('click', togglePlay);
     // fullscreenBtn.addEventListener('click', toggleFullscreen);
@@ -235,10 +235,7 @@ $( document ).ready(function() {
         c.animate({'maxHeight':h},function () {
             $(this).addClass('block-accessories__text--open')
         }, function () {
-        //     $('.reviews-slider').slick("setPosition")
-        //     $('.reviews-slider').slick('resize')
-        //   console.log('open');
-        window.dispatchEvent(new Event('resize'));
+            window.dispatchEvent(new Event('resize'));
         
         });
         $(this).hide()
@@ -255,9 +252,7 @@ $( document ).ready(function() {
             $(this).removeClass('block-accessories__text--open')
             
         }, function () {
-            // $('.reviews-slider').slick("setPosition")
-            // $('.reviews-slider').slick('resize')
-            // console.log('close');
+           
         window.dispatchEvent(new Event('resize'));
      
           
@@ -438,6 +433,11 @@ $( document ).ready(function() {
                     },
                 },
             ],
+        });
+
+        $(".product-slider-nav").on('beforeChange', function(){
+            var video = document.querySelector('#about_video');
+            video.pause();
         });
     }
     // end product-slider
