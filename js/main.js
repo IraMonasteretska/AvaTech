@@ -385,15 +385,69 @@ $( document ).ready(function() {
             }
         ]
     })
+    
     if (document.querySelector(".product-slider-for")) {
+        // $('.slider-for-item video').on('click', function () {
+        //     if (this.paused) {
+        //         this.play();
+        //     } else {
+        //         this.pause();	
+        //     }
+        // })
+        var productSlider = $(".product-slider-for")
+        // When the slide is changing
+        function playPauseVideo(slick, control){
+            var currentSlide, slideType, startTime, video;
+        
+            currentSlide = slick.find(".slick-current");
+            slideType = currentSlide.attr("class").split(" ")[1];
+            startTime = currentSlide.data("video-start");
+        
+            if (slideType === "video") {
+            video = currentSlide.children("video").get(0);
+            if (video != null) {
+                if (control === "play"){
+                video.play();
+                } else {
+                video.pause();
+                }
+            }
+            }
+        }
+
+        
+        productSlider.on("beforeChange", function(event, slick) {
+            slick = $(slick.$slider);
+            playPauseVideo(slick,"pause");
+        });
+        productSlider.on("afterChange", function(event, slick) {
+            slick = $(slick.$slider);
+            playPauseVideo(slick,"play");
+        });
+
         // product-slider
-        $(".product-slider-for").slick({
+        productSlider.slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
             fade: true,
             asNavFor: ".product-slider-nav",
         });
+
+
+        // $(".product-slider-for").on('beforeChange', function(event, { slideCount: count }, currentSlide, nextSlide){
+        //     let selectors = [nextSlide, nextSlide - count, nextSlide + count].map(n => `[data-slick-index="${n}"]`).join(', ');
+        //     $('.slick-now').removeClass('slick-now');
+        //     $(selectors).find('video').addClass('slick-now_' + count +'');
+        //     var video = document.querySelectorAll('.sl-video');
+        //     video.forEach(element => {
+        //         element.pause();
+        //     });
+        //     video
+        // });
+
+        
+       
         $(".product-slider-nav").slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -435,10 +489,7 @@ $( document ).ready(function() {
             ],
         });
 
-        $(".product-slider-nav").on('beforeChange', function(){
-            var video = document.querySelector('#about_video');
-            video.pause();
-        });
+       
     }
     // end product-slider
 
