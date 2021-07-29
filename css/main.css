@@ -551,6 +551,7 @@ textarea {
   .accordeon-item__title {
     font-size: 18px;
     margin: 30px 0;
+    display: none;
   }
 }
 
@@ -590,6 +591,7 @@ textarea {
   .accordeon-item__text {
     max-width: none;
     min-width: auto;
+    padding-top: 20px;
   }
 }
 
