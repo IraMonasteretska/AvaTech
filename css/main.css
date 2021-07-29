@@ -4214,6 +4214,40 @@ textarea {
   }
 }
 
+.footer .chat-btn {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 195px;
+  right: 115px;
+  z-index: 3;
+  text-align: center;
+  padding-top: 6px;
+}
+
+@media (max-width: 1440px) {
+  .footer .chat-btn {
+    bottom: 105px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer .chat-btn {
+    right: 20px;
+  }
+}
+
 .solutions {
   margin-bottom: 100px;
 }
