@@ -197,6 +197,7 @@ $( document ).ready(function() {
         $('.projects-item__wrap').fadeIn()
     })
 
+    // main slider /////////////
     $('.intro-bg-slider').slick({
         arrows: false,
         fade: true,
@@ -219,7 +220,7 @@ $( document ).ready(function() {
         nextArrow: $('.slick-rev-next'),
         asNavFor: ".intro-bg-slider",
     })
-
+    // main slider end /////////////
 
 
     $('.block-accessories__more .expand').on('click',function(e){
@@ -479,4 +480,28 @@ $( document ).ready(function() {
     $('.share__list-btn').on('click', function () {
         $('.share__list').slideToggle();
     })
+
+    $('.check-box__title').on('click', function () {
+        
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active')
+            $(this).next().removeClass('active')
+        } else {
+            $('.check-box__title').removeClass('active')
+            $('.check-box__list').removeClass('active')
+            $(this).addClass('active')
+            $(this).next().addClass('active')
+        }
+
+        
+        
+    })
+
+    $(document).click(function(event) {
+        if (!$(event.target).closest(".check-box__title, .check-box-item, .check-box-item__label").length) {
+            $('.check-box__title').removeClass('active')
+            $('.check-box__list').removeClass('active')
+        }
+    });
+ 
 });
