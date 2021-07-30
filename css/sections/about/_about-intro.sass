@@ -4,8 +4,15 @@
 
     &__slider
         .about-intro-slide
+            position: relative
+            @include dynamic-block("img", 100%, 29%)
+            +mq(800px)
+                @include dynamic-block("img", 100%, 230px)
             img
                 width: 100%
+                // max-height: 551px
+                object-fit: cover
+                height: 100%
                 +mq(lg)
                     min-height: 230px
                     object-fit: cover

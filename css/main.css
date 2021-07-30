@@ -2797,8 +2797,50 @@ textarea {
   margin-bottom: 50px;
 }
 
+.about-intro__slider .about-intro-slide {
+  position: relative;
+  position: relative;
+  width: 100%;
+}
+
+.about-intro__slider .about-intro-slide:before {
+  content: "";
+  display: block;
+  padding-top: 29%;
+}
+
+.about-intro__slider .about-intro-slide img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 800px) {
+  .about-intro__slider .about-intro-slide {
+    position: relative;
+    width: 100%;
+  }
+  .about-intro__slider .about-intro-slide:before {
+    content: "";
+    display: block;
+    padding-top: 230px;
+  }
+  .about-intro__slider .about-intro-slide img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
 .about-intro__slider .about-intro-slide img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 
 @media (max-width: 991px) {
