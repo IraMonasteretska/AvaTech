@@ -634,8 +634,8 @@ textarea {
 
 @media (max-width: 1505px) {
   .accordeon-item__content img {
-    min-width: 490px;
-    min-height: 440px;
+    min-width: 550px;
+    min-height: 530px;
   }
 }
 
